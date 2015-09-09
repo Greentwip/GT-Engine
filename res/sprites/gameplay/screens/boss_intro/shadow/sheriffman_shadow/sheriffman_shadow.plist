@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>sheriffman_shadow_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{170,198}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{170,198}}</string>
+                <key>sourceSize</key>
+                <string>{170,198}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>sheriffman_shadow.pvr.ccz</string>
+            <key>size</key>
+            <string>{174,202}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:071e65efaaa44dd05688715b36e369d4:9ae58a4839cf128503cff45df237a6da:e749fbfcdda0396708f9e7f95fb625a6$</string>
+            <key>textureFileName</key>
+            <string>sheriffman_shadow.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

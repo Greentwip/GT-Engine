@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+        </dict>
+        <key>definitions</key>
+        <dict>
+
+            <key>violet_standshoot</key>
+            <dict>
+                <key>size</key>
+                <string>{ 31.00000,31.00000 }</string>
+                <key>anchor</key>
+                <string>{ 0.41900,0.00000 }</string>
+            </dict>
+
+            <key>violet_dashjump</key>
+            <dict>
+                <key>size</key>
+                <string>{ 23.00000,54.00000 }</string>
+                <key>anchor</key>
+                <string>{ 0.52200,0.53700 }</string>
+            </dict>
+
+            <key>violet_walkshoot</key>
+            <dict>
+                <key>size</key>
+                <string>{ 35.00000,35.00000 }</string>
+                <key>anchor</key>
+                <string>{ 0.42900,0.00000 }</string>
+            </dict>
+
+            <key>violet_walk</key>
+            <dict>
+                <key>size</key>
+                <string>{ 29.00000,35.00000 }</string>
+                <key>anchor</key>
+                <string>{ 0.51700,0.00000 }</string>
+            </dict>
+
+        </dict>
+    </dict>
+</plist>
+
+
+
+

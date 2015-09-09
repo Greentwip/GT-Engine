@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>pause_background_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{256,224}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{256,224}}</string>
+                <key>sourceSize</key>
+                <string>{256,224}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>pause_background.pvr.ccz</string>
+            <key>size</key>
+            <string>{260,228}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:fda6b813925c82e8444d4d5c317c30b7:b844babaed6130d190d5eb84fc185040:414167a8cfc608c6ebfc01b4fbac921f$</string>
+            <key>textureFileName</key>
+            <string>pause_background.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

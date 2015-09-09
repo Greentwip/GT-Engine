@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="16" height="14" tilewidth="16" tileheight="16" nextobjectid="8">
+ <tileset firstgid="1" name="level_weapon" tilewidth="256" tileheight="224">
+  <image source="level_weapon.png" width="256" height="224"/>
+ </tileset>
+ <layer name="layout" width="16" height="14">
+  <data encoding="base64" compression="zlib">
+   eJxjYBgFo2AUkAsYKdQPAAPAAAI=
+  </data>
+ </layer>
+ <objectgroup name="blocks">
+  <object id="1" x="0" y="110" width="256" height="24"/>
+ </objectgroup>
+ <objectgroup name="logic">
+  <object id="2" name="checkpoint" type="first" x="112" y="104" width="16" height="16"/>
+  <object id="3" name="teleporter" x="112" y="110" width="16" height="16"/>
+ </objectgroup>
+ <objectgroup name="animations"/>
+ <objectgroup name="special"/>
+</map>

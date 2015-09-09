@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>dross_shadow_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{248,180}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{248,180}}</string>
+                <key>sourceSize</key>
+                <string>{248,180}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>dross_shadow.pvr.ccz</string>
+            <key>size</key>
+            <string>{184,252}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:1c4274e368820ae3c0f283980325e465:38a8d495bddd4181bba6e11d6d208349:516072390e64ebcda6f1b5f973ce3c40$</string>
+            <key>textureFileName</key>
+            <string>dross_shadow.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

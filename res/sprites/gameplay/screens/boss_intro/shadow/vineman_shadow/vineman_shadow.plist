@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>vineman_shadow_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{149,200}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{149,200}}</string>
+                <key>sourceSize</key>
+                <string>{149,200}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>vineman_shadow.pvr.ccz</string>
+            <key>size</key>
+            <string>{204,153}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:84f884a744615103405658588f41f949:c6cbd3d7763130cec2ed4aa83fd70bee:cf49baf4de0e9ed411dad41a7f9bc61a$</string>
+            <key>textureFileName</key>
+            <string>vineman_shadow.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

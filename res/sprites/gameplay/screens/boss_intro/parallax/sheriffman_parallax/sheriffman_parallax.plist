@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>sheriffman_parallax_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{256,224}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{256,224}}</string>
+                <key>sourceSize</key>
+                <string>{256,224}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>sheriffman_parallax.pvr.ccz</string>
+            <key>size</key>
+            <string>{260,228}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:47116c297ee98d57852591a19fd56ffe:b7c17da567319928e2f951c0f2c58327:d4aec58b04e1688de9604c81b5df4034$</string>
+            <key>textureFileName</key>
+            <string>sheriffman_parallax.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>
