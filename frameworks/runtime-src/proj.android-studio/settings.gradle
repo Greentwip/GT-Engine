@@ -1,0 +1,4 @@
+include ':libcocos2dx'
+project(':libcocos2dx').projectDir = new File(settingsDir, '../../cocos2d-x/cocos/platform/android/libcocos2dx')
+include ':revenge_of_the_future'
+project(':revenge_of_the_future').projectDir = new File(settingsDir, 'app')
