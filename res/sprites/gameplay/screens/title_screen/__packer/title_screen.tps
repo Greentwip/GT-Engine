@@ -4,9 +4,9 @@
         <key>fileFormatVersion</key>
         <int>3</int>
         <key>texturePackerVersion</key>
-        <string>3.9.2</string>
+        <string>3.9.3</string>
         <key>fileName</key>
-        <string>C:/dev/projects/greentwip/codycobain/revenge_of_the_future/res/sprites/screens/title/__packer/title_screen.tps</string>
+        <string>C:/dev/projects/greentwip/codycobain/CodyCobain/res/sprites/gameplay/screens/title_screen/__packer/title_screen.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">

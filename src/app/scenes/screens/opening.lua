@@ -12,7 +12,6 @@ function opening:onLoad()
     local sequence = cc.Sequence:create(initiate, nil)
     self:runAction(sequence)
 
-
     --audio.playMusic("sounds/bgm_title.mp3", true)
 
     -- self variables
@@ -38,39 +37,11 @@ function opening:opening_intro_a()
         self.greentwip_logo_:stopAllActions()
         self.greentwip_logo_:removeSelf()
         self.greentwip_logo_ = nil
-        self:opening_intro_b()
-    end)
-
-    local sequence = cc.Sequence:create(pre_callback, duration, post_callback, nil)
-    self:runAction(sequence)
-end
-
-function opening:opening_intro_b()
-    self.flematico_logo_ = sprite:create("sprites/gameplay/screens/opening/flematico/flematico_logo", cc.p(0, 0))
-                                 :setPosition(cc.p(0,0))
-                                 :addTo(self)
-
-    local actions = {}
-    actions[#actions + 1] = {name = "flematico_logo",   animation = {name = "flematico_logo",  forever = false, delay = 0.50} }
-
-    self.flematico_logo_:load_actions_set(actions, false)
-
-    local pre_callback = cc.CallFunc:create(function()
-        self.flematico_logo_:run_action("flematico_logo")
-    end)
-
-    local duration = cc.DelayTime:create(self.flematico_logo_:get_action_duration("flematico_logo"))
-    local post_callback = cc.CallFunc:create(function()
-        self.flematico_logo_:stopAllActions()
-        self.flematico_logo_:removeSelf()
-        self.flematico_logo_ = nil
         self:getApp():enterScene("screens.title", "FADE", 1)
     end)
 
     local sequence = cc.Sequence:create(pre_callback, duration, post_callback, nil)
-
     self:runAction(sequence)
-
 end
 
 function opening:step(dt)

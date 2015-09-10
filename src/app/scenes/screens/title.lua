@@ -17,12 +17,11 @@ function title:onLoad()
                              :addTo(self, 128)
 
     self.text_ = label:create("start game",
-                                     "fonts/megaman_2.ttf",
-                                     8,
-                                     cc.TEXT_ALIGNMENT_LEFT,
-                                     cc.VERTICAL_TEXT_ALIGNMENT_TOP)
-                             :addTo(self, 128)
-
+                              "fonts/megaman_2.ttf",
+                              8,
+                              cc.TEXT_ALIGNMENT_LEFT,
+                              cc.VERTICAL_TEXT_ALIGNMENT_TOP)
+                      :addTo(self, 128)
 
     self.text_:setPosition(cc.p(self.selector_:getPositionX() + self.selector_.sprite_:getContentSize().width,
                                 self.selector_:getPositionY() + self.text_.label_:getContentSize().height * 0.5))

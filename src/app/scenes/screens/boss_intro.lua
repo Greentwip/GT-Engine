@@ -18,7 +18,7 @@ function boss_intro:onLoad()
 
     self.boss_:setPositionY(self.boss_:getPositionY() - 16)
 
-    local boss_animation = {name = "animate",  animation = {name = "boss_animation_" .. cc.current_level_.mug_,  forever = false, delay = 0.10} }
+    local boss_animation = {name = "animate",  animation = { name = "boss_animation_" .. cc.current_level_.mug_,  forever = false, delay = 0.10} }
 
     self.boss_:load_action(boss_animation, false)
 
