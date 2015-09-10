@@ -76,6 +76,8 @@ function level_controller:ctor(player, camera, scene_components, bgm, arguments)
                                       :setPosition(cc.p(-cc.bounds_:width() * 0.5 + 8, cc.bounds_:height() * 0.5 -16))
                                       :addTo(cc.bounds_)     -- node positions are relative to parent's
 
+        self.hud_.energy_:setVisible(false)
+
         self.player_.health_bar_ = self.hud_.health_
         self.player_.energy_bar_ = self.hud_.energy_
 

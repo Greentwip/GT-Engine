@@ -100,7 +100,8 @@ function cody:init_browners()
                                                                  :setPosition(cc.p(0, 0))
                                                                  :addTo(self)
 
-    self.current_browner_ = self.browners_[cc.browners_.teleport_.id_]
+    self:switch_browner(cc.browners_.teleport_.id_)
+
     self.current_browner_:activate()
     self.current_browner_:run_action("jump")
 
@@ -112,7 +113,7 @@ function cody:init_browners()
 end
 
 function cody:spawn()
-    self.current_browner_ = self.browners_[cc.browners_.teleport_.id_]
+    self:switch_browner(cc.browners_.teleport_.id_)
 
     for _, v in pairs(self.browners_) do
         v:deactivate()
@@ -136,14 +137,30 @@ function cody:spawn()
 end
 
 function cody:switch_browner(id)
-    self.current_browner_:deactivate()
+
+    local ground_backup = false
+
+    if self.current_browner_ ~= nil then
+        self.current_browner_:deactivate()
+        ground_backup = self.current_browner_.on_ground_
+    end
 
     local new_browner = self.browners_[id]
 
-    new_browner.on_ground_ = self.current_browner_.on_ground_
+    new_browner.on_ground_ = ground_backup
 
     self.current_browner_ = new_browner
     self.current_browner_:activate()
+
+    if new_browner.browner_id_ == cc.browners_.violet_.id_ or new_browner.browner_id_ == cc.browners_.teleport_.id_ then
+       if self.energy_bar_ ~= nil then
+           self.energy_bar_:setVisible(false)
+       end
+    else
+        if self.energy_bar_ ~= nil then
+            self.energy_bar_:setVisible(true)
+        end
+    end
 
     self:trigger_actions()
 end

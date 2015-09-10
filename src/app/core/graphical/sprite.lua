@@ -81,15 +81,15 @@ end)
 function sprite:set_image_index(image_index)
     self.image_index_ = image_index
 
-    local frames = self.frames_
-
     self:setSpriteFrame(self.frames_[self.current_animation_][self.image_index_])
 end
 
 function sprite:set_animation(animation_name)
     if animation_name ~= self.current_animation_ then
-        self.current_animation_ = animation_name
-        self:set_image_index(1)
+        if self.frames_[animation_name] ~= nil then
+            self.current_animation_ = animation_name
+            self:set_image_index(1)
+        end
     end
 
     return self

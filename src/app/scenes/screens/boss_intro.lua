@@ -22,7 +22,8 @@ function boss_intro:onLoad()
 
     self.boss_:load_action(boss_animation, false)
 
-    self.text_ = label:create(cc.current_level_.mug_,
+
+    self.text_ = label:create(string.gsub(cc.current_level_.mug_, "man", " man"),
                               "fonts/megaman_2.ttf",
                               8,
                               cc.TEXT_ALIGNMENT_CENTER,

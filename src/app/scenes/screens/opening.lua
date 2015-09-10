@@ -41,6 +41,7 @@ function opening:opening_intro_a()
     end)
 
     local sequence = cc.Sequence:create(pre_callback, duration, post_callback, nil)
+
     self:runAction(sequence)
 end
 
