@@ -1,11 +1,6 @@
 # Qu'elle que soit la baise 
 R&amp;D, Full source code.
 
-Old repository: 
-
-https://github.com/Greentwip/CodyCobain
-
-
 Authors
 
 •[Greentwip](http://greentwip.github.io)
