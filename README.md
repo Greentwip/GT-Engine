@@ -1,5 +1,9 @@
 # Qu'elle que soit la baise 
-R&amp;D, Cocos2d-x, Lua, Chipmunk physics, full source code.
+R&amp;D, Full source code.
+
+Old repository: 
+
+https://github.com/Greentwip/CodyCobain
 
 
 Authors
