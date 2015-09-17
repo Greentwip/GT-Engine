@@ -1,11 +1,10 @@
-# Whatever the fuck 
+# Qu'elle que soit la baise 
 R&amp;D, Cocos2d-x, Lua, Chipmunk physics, full source code.
 
 
 Authors
 
 •[Greentwip](http://greentwip.github.io)
-
 
                LICENCE PUBLIQUE RIEN À BRANLER
                      Version 1, Mars 2009
