@@ -1,10 +1,4 @@
 # Whatever the fuck 
-R&amp;D, Cocos2d-x, Lua, Chipmunk physics, full source code.
-
-
-Authors
-
-•[Greentwip](http://greentwip.github.io)
 
 
     DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE 
