@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>vineman_parallax_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{256,224}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{256,224}}</string>
+                <key>sourceSize</key>
+                <string>{256,224}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>vineman_parallax.pvr.ccz</string>
+            <key>size</key>
+            <string>{260,228}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:748ef085e23c129641840a471ce65d40:8585d0c7b1b0b5192fe07d44927c661e:e1218366a402d00b0de3956547fa83be$</string>
+            <key>textureFileName</key>
+            <string>vineman_parallax.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

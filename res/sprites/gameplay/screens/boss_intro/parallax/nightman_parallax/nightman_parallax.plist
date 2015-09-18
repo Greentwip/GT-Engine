@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>nightman_parallax_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{256,224}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{256,224}}</string>
+                <key>sourceSize</key>
+                <string>{256,224}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>nightman_parallax.pvr.ccz</string>
+            <key>size</key>
+            <string>{260,228}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:46965a7993a87aa10161c0e2fba34bd2:1e61af75b1b432f2918de2b389f4742f:2a8b4a9a172b713308dfc017ee531d20$</string>
+            <key>textureFileName</key>
+            <string>nightman_parallax.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>nightman_shadow_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{165,182}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{165,182}}</string>
+                <key>sourceSize</key>
+                <string>{165,182}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>nightman_shadow.pvr.ccz</string>
+            <key>size</key>
+            <string>{186,169}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e981a3d59b50c578217bf9c5cb7e4942:f5b59a3de7c2d258f1bded0d4ca5097c:012177b9817e5b5c5dd0e3fd5c0ea26e$</string>
+            <key>textureFileName</key>
+            <string>nightman_shadow.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>tank_bullet_walk_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{11,11}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{11,11}}</string>
+                <key>sourceSize</key>
+                <string>{11,11}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>tank_bullet.pvr.ccz</string>
+            <key>size</key>
+            <string>{16,15}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:65aca96546b667922400c646f1358395:6726ff0cb00c3357133981b02eec7de9:69f181b02fe879891ffb3b1d00892799$</string>
+            <key>textureFileName</key>
+            <string>tank_bullet.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

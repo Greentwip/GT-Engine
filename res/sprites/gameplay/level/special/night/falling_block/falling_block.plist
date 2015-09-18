@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>falling_block_regular_0</key>
+            <dict>
+                <key>frame</key>
+                <string>{{2,2},{17,19}}</string>
+                <key>offset</key>
+                <string>{0,0}</string>
+                <key>rotated</key>
+                <true/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{17,19}}</string>
+                <key>sourceSize</key>
+                <string>{17,19}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>falling_block.pvr.ccz</string>
+            <key>size</key>
+            <string>{24,21}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:d3eb9f1ca76831e1541348db973b2644:881233cddac26bad25312f2ad3ca7890:fce553aaf894234d497cb26ba7dedd5e$</string>
+            <key>textureFileName</key>
+            <string>falling_block.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>
