@@ -335,7 +335,7 @@ int SimulatorWin::run()
     ConfigParser::getInstance()->setInitViewSize(frameSize);
     const bool isResize = _project.isResizeWindow();
     std::stringstream title;
-    title << "Cocos Simulator - " << ConfigParser::getInstance()->getInitViewName();
+    title << "CC - " << ConfigParser::getInstance()->getInitViewName();
     initGLContextAttrs();
     auto glview = GLViewImpl::createWithRect(title.str(), frameRect, frameScale);
     _hwnd = glview->getWin32Window();
