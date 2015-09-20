@@ -109,7 +109,7 @@ local function setConstants()
     display.right_bottom       = cc.p(display.right, display.bottom)
     display.right_center       = cc.p(display.right, display.cy)
     display.top_center         = cc.p(display.cx, display.top)
-    display.top_bottom         = cc.p(display.cx, display.bottom) -- this should be called center bottom and center top
+    display.top_bottom         = cc.p(display.cx, display.bottom)
 
     printInfo(string.format("# display.sizeInPixels         = {width = %0.2f, height = %0.2f}", display.sizeInPixels.width, display.sizeInPixels.height))
     printInfo(string.format("# display.size                 = {width = %0.2f, height = %0.2f}", display.size.width, display.size.height))
@@ -504,12 +504,6 @@ function display.loadSpriteFrames(dataFilename, imageFilename, callback)
     if display.TEXTURES_PIXEL_FORMAT[imageFilename] then
         cc.Texture2D:setDefaultAlphaPixelFormat(cc.TEXTURE2_D_PIXEL_FORMAT_BGR_A8888)
     end
-end
-
--- greentwip sprite frames comprobation
-
-function display.isSpriteFramesWithFileLoaded(data_file_name)
-    return spriteFrameCache:isSpriteFramesWithFileLoaded(data_file_name)
 end
 
 function display.removeSpriteFrames(dataFilename, imageFilename)

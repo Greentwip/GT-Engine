@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -213,7 +213,7 @@ xcopy "$(ProjectDir)..\..\..\src" "$(LocalDebuggerWorkingDirectory)\src" /D /E /
     <ResourceCompile Include="game.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\cc.ico" />
+    <Image Include="res\game.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\cocos2d-x\cocos\2d\libcocos2d.vcxproj">
