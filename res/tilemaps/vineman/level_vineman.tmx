@@ -116,8 +116,8 @@
   <object id="170" name="hole" x="688" y="216" width="32" height="24"/>
   <object id="171" name="hole" x="560" y="448" width="16" height="16"/>
   <object id="172" name="hole" x="992" y="440" width="16" height="22"/>
-  <object id="173" name="hole" x="2832" y="450" width="34" height="28"/>
-  <object id="174" name="hole" x="2720" y="672" width="32" height="14"/>
+  <object id="173" name="hole" x="2832" y="420" width="34" height="58"/>
+  <object id="174" name="hole" x="2720" y="660" width="32" height="26"/>
   <object id="175" name="ladder" x="608" y="498" width="16" height="86"/>
   <object id="176" name="ladder" x="992" y="402" width="16" height="186"/>
   <object id="177" name="ladder" x="1520" y="290" width="16" height="86"/>
