@@ -104,7 +104,9 @@ function intro:ctor(parallax_arguments)
 
     self.shadow_:runAction(shadow_sequence)
 
-    audio.playMusic(self.bgm_, false)
+    if self.bgm_ ~= nil then
+        audio.playMusic(self.bgm_, false)
+    end
 end
 
 

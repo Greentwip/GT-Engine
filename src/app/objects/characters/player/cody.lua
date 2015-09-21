@@ -588,10 +588,13 @@ function cody:exit(args)
                 init = false
         end
 
+        self:getParent().level_controller_.camera_.static_mode_ = true              -- forcing camera reset due to weird bug regarding tmx maps
+        self:getParent().level_controller_.camera_.static_position_ = cc.p(128, 112)
+
         self:getParent():setVisible(false)
         local scene = self:getParent()
                           :getApp()
-                          :enterScene(level, "FADE", 2, {physics = physics})
+                          :enterScene(level, "FADE", 1, {physics = physics})
 
         if init then
             scene:prepare(self.exit_arguments_)

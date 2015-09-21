@@ -9,10 +9,11 @@ local level  = class("level_weapon", level_base)
 
 -- anything related to physics should be created here
 function level:prepare(args)
-    self.level_bgm_ = "sounds/bgm_get_weapon.mp3"
+    self.level_bgm_ = "sounds/screens/boss_intro/bgm_get_weapon.mp3"
     self.tmx_map_   = "tilemaps/weapon/level_weapon.tmx"
 
     self.load_arguments_ = {}
+    self.load_arguments_.sender_ = self
     self.load_arguments_.disable_hud_ = true
     self.load_arguments_.disable_ready_object_ = true
     self.load_arguments_.time_to_play_ = 1

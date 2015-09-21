@@ -39,7 +39,7 @@ function weapon_controller:ctor(args)
         sub_category_ = "screens",
         package_ = "weapon",
         cname_ = "cody",
-        bgm_ = "sounds/screens/boss_intro/bgm_boss_intro.mp3",
+        bgm_ = nil, -- set up in level base
         on_end_callback_ = self.on_intro_complete,
         sender_ = self}
 

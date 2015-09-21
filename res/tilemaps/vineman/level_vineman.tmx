@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.0" orientation="orthogonal" renderorder="right-down" width="259" height="56" tilewidth="16" tileheight="16" nextobjectid="12">
+<map version="1.0" orientation="orthogonal" renderorder="right-down" width="259" height="56" tilewidth="16" tileheight="16" nextobjectid="16">
  <tileset firstgid="1" name="level_vineman_bank.png" tilewidth="16" tileheight="16" spacing="2" margin="1">
   <image source="level_vineman_bank.png" width="864" height="164"/>
  </tileset>
@@ -180,7 +180,7 @@
   <object id="3" name="door" type="general" x="3880" y="834" width="16" height="16"/>
  </objectgroup>
  <objectgroup name="boss">
-  <object id="8" name="boss" type="vine" x="1232" y="496" width="16" height="16"/>
-  <object id="9" name="teleporter" x="1232" y="626" width="16" height="16"/>
+  <object id="14" name="boss" type="vine" x="4104" y="720" width="16" height="16"/>
+  <object id="15" name="teleporter" x="4104" y="850" width="16" height="16"/>
  </objectgroup>
 </map>

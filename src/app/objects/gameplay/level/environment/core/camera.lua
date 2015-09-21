@@ -104,6 +104,12 @@ function camera:step(dt)
         return
     end
 
+    if self.static_mode_ then
+            self:getScene():getDefaultCamera():setPositionX(self.static_position_.x)
+            self:getScene():getDefaultCamera():setPositionY(self.static_position_.y)
+        return
+    end
+
 
     if self.camera_mode_ == cc.CAMERA.MODE.SCROLL then
 

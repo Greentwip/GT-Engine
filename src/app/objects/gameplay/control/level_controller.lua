@@ -12,7 +12,6 @@ function level_controller:ctor(player, camera, scene_components, bgm, arguments)
 
     self.quitting_ = false
 
-
     if cc.game_status_ ~= cc.GAME_STATUS.RUNNING then
         cc.pause(false)
     end
