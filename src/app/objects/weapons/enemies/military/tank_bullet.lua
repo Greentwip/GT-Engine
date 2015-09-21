@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/1/2015 2:49 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon      = import("app.objects.weapons.base.weapon")
 local tank_bullet = class("tank_bullet", weapon)

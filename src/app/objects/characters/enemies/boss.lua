@@ -1,7 +1,4 @@
---
--- Created by Victor on 9/5/2015 11:34 PM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local boss = import("app.core.physics.kinematic_character").create("boss")
 

@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/21/2015 10:31 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon      = import("app.objects.weapons.base.weapon")
 local vine_bullet = class("violet_bullet", weapon)

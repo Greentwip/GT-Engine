@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/13/2015 11:49 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local selector      = class("selector", cc.Node)
 local sprite        = import("app.core.graphical.sprite")

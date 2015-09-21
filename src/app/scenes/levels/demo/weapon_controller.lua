@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/7/2015 7:12 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon_controller = class("weapon_controller", cc.Node)
 

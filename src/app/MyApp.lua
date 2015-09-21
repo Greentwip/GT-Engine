@@ -1,3 +1,4 @@
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local MyApp = class("MyApp", cc.load("mvc").AppBase)
 

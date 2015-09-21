@@ -1,6 +1,5 @@
---
--- Created by Victor on 7/11/2015 7:56 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local fade          = class("fade", cc.Node)
 local sprite        = import("app.core.graphical.sprite")

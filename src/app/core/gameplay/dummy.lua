@@ -1,4 +1,1 @@
---
--- Created by Victor on 8/27/2015 5:12 AM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved. 

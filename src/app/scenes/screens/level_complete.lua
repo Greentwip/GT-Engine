@@ -1,3 +1,4 @@
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local level_complete = import("app.core.gameplay.control.layout_base").create("level_complete")
 

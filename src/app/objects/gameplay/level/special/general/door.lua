@@ -1,7 +1,4 @@
---
--- Created by Victor on 8/22/2015 5:50 PM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local special   = import("app.core.physics.static_character").create("door")
 

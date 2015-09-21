@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/25/2015 5:53 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local enemy   = import("app.core.physics.kinematic_character").create("enemy")
 local item    = import("app.objects.gameplay.level.goods.item")

@@ -1,6 +1,5 @@
---
--- Created by Victor on 6/25/2015 8:34 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local spairs = import("app.core.system.spairs")
 local definition = import("app.core.graphical.definition")

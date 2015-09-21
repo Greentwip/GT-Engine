@@ -1,6 +1,4 @@
---
--- Created by Victor on 8/8/2015 12:29 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local enemy     = import("app.objects.characters.enemies.base.enemy")
 local mob       = class("flower", enemy)

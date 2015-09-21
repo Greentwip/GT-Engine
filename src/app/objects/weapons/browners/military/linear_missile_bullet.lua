@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/1/2015 2:50 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon        = import("app.objects.weapons.base.weapon")
 local linear_missile_bullet = class("linear_missile_bullet", weapon)

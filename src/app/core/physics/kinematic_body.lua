@@ -1,6 +1,5 @@
---
--- Created by Victor on 7/17/2015 4:55 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local kinematic_body    = class("kinematic_body", cc.Node)
 

@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/13/2015 9:51 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local boss_intro = import("app.core.gameplay.control.layout_base").create("boss_intro")
 

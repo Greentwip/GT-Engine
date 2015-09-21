@@ -1,6 +1,4 @@
---
--- Created by Victor on 8/2/2015 5:26 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local level_base = import("app.objects.gameplay.control.level_base")
 local weapon_controller = import("app.scenes.levels.demo.weapon_controller")

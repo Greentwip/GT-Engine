@@ -1,3 +1,4 @@
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local title = import("app.core.gameplay.control.layout_base").create("title")
 

@@ -1,6 +1,5 @@
---
--- Created by Victor on 7/17/2015 5:03 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local layout_base = {}
 

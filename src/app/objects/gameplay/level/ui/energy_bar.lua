@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/9/2015 10:54 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local energy_bar = class("energy_bar", cc.Node)
 local sprite = import("app.core.graphical.sprite")

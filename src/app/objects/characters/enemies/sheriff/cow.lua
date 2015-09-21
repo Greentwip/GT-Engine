@@ -1,6 +1,4 @@
---
--- Created by Victor on 8/5/2015 11:11 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local enemy  = import("app.objects.characters.enemies.base.enemy")
 local mob    = class("cow", enemy)

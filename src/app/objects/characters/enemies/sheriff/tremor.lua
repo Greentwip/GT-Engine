@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/25/2015 5:46 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local sprite           = import("app.objects.graphical.sprite")
 local enemy                 = import("app.objects.characters.enemies.base.enemy")

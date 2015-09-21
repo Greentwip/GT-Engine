@@ -1,7 +1,4 @@
---
--- Created by Victor on 7/4/2015 2:32 AM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local ready_object = class("ready_object", cc.Node)
 local sprite = import("app.core.graphical.sprite")

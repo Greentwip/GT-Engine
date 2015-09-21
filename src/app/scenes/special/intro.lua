@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/8/2015 10:23 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local intro = class("intro", cc.Node)
 

@@ -1,6 +1,4 @@
---
--- Created by Victor on 6/22/2015 5:07 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local stage_select = import("app.core.gameplay.control.layout_base").create("stage_select")
 

@@ -1,6 +1,5 @@
---
--- Created by Victor on 6/25/2015 3:44 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local label = class("label", cc.Node)
 

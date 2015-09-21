@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/16/2015 9:35 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local browner                   = import("app.objects.characters.player.browners.base.browner")
 local linear_missile_bullet     = import("app.objects.weapons.browners.military.linear_missile_bullet")

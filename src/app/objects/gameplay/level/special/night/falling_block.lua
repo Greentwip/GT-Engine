@@ -1,6 +1,4 @@
---
--- Created by Victor on 8/23/2015 11:25 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local special   = import("app.core.physics.kinematic_character").create("falling_block")
 

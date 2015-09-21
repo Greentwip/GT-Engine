@@ -1,6 +1,5 @@
---
--- Created by Victor on 6/25/2015 9:45 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 return function (t, order)
     -- collect the keys
     local keys = {}

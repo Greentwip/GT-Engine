@@ -1,7 +1,4 @@
---
--- Created by Victor on 8/3/2015 6:42 AM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local sprite           = import("app.objects.graphical.sprite")
 

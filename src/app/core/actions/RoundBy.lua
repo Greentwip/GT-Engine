@@ -1,7 +1,4 @@
---
--- Created by Victor on 8/29/2015 7:29 PM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved. 
 
 local RoundBy = class("RoundBy")
 

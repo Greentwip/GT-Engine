@@ -1,6 +1,4 @@
---
--- Created by Victor on 6/28/2015 12:21 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local cody = import("app.core.physics.kinematic_character").create("cody")
 

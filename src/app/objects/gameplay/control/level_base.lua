@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/7/2015 5:30 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local level_base = import("app.core.gameplay.control.layout_base").create("level_base")
 

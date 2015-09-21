@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/16/2015 9:35 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local browner                = import("app.objects.characters.player.browners.base.browner")
 local sliding_flame_bullet     = import("app.objects.weapons.browners.night.sliding_flame_bullet")

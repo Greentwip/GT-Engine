@@ -1,6 +1,4 @@
---
--- Created by Victor on 8/24/2015 7:47 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local armature = class("armature")
 

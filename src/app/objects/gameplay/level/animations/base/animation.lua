@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/4/2015 3:52 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local animation    = import("app.core.physics.kinematic_character").create("animation")
 local sprite  = import ("app.core.graphical.sprite")

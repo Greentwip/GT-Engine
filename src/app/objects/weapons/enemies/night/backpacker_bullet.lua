@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/1/2015 2:50 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon      = import("app.objects.weapons.base.weapon")
 local backpacker_bullet = class("backpacker_bullet", weapon)

@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/9/2015 10:12 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local bounds = class("bounds", cc.Node)
 

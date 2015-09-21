@@ -1,6 +1,5 @@
---
--- Created by Victor on 9/5/2015 6:30 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local definition = class("definition")
 

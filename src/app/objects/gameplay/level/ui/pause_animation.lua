@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/18/2015 1:23 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon_animation  = class("weapon_animation", cc.Node)
 local sprite            = import("app.core.graphical.sprite")

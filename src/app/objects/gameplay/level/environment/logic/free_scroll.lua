@@ -1,6 +1,4 @@
---
--- Created by Victor on 8/31/2015 5:32 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local block = import("app.objects.gameplay.level.environment.core.block")
 local free_scroll = class("free_scroll", block)

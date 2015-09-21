@@ -1,6 +1,5 @@
---
--- Created by Victor on 7/16/2015 9:40 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local browner       = class("browner-enemy", cc.Node)
 

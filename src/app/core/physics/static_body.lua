@@ -1,6 +1,5 @@
---
--- Created by Victor on 9/5/2015 11:09 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
+
 
 local static_body    = class("static_body", cc.Node)
 

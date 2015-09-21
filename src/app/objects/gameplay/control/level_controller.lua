@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/9/2015 2:27 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local level_controller  = class("level_controller", cc.Node)
 local energy_bar        = import("app.objects.gameplay.level.ui.energy_bar")

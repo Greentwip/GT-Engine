@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/13/2015 10:56 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local pause_menu = class("pause_menu", cc.Node)
 

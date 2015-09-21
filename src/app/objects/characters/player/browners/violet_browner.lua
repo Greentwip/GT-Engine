@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/16/2015 9:34 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local browner = import("app.objects.characters.player.browners.base.browner")
 

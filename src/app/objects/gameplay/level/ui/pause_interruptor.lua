@@ -1,7 +1,4 @@
---
--- Created by Victor on 7/13/2015 2:08 PM
---
-
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local pause_interruptor = class("pause_interruptor", cc.Node)
 local sprite      = import("app.core.graphical.sprite")

@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/5/2015 11:04 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local sprite  = import ("app.core.graphical.sprite")
 local armature = import ("app.core.physics.armature")

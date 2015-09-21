@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/20/2015 7:47 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon    = import("app.core.physics.kinematic_character").create("weapon")
 

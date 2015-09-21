@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/9/2015 9:46 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local camera      = import("app.core.physics.kinematic_character").create("camera")
 

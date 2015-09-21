@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/5/2015 3:04 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local animation = import ("app.objects.gameplay.level.animations.base.animation")
 

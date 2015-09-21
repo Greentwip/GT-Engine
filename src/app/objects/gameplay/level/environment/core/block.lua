@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/9/2015 6:01 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local block = class("block", cc.Node)
 

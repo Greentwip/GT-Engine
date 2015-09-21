@@ -1,6 +1,4 @@
---
--- Created by Victor on 7/17/2015 6:44 PM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local item      = import("app.core.physics.kinematic_character").create("item")
 

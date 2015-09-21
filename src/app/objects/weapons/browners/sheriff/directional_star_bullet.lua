@@ -1,6 +1,4 @@
---
--- Created by Victor on 9/2/2015 10:21 AM
---
+-- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
 local weapon        = import("app.objects.weapons.base.weapon")
 local directional_star_bullet = class("directional_star_bullet", weapon)
