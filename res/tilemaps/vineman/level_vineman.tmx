@@ -41,10 +41,10 @@
   <object id="31" x="2608" y="466" width="224" height="12"/>
   <object id="32" x="2640" y="866" width="446" height="18"/>
   <object id="33" x="2608" y="478" width="32" height="392"/>
-  <object id="34" x="3552" y="850" width="592" height="14"/>
+  <object id="34" x="3552" y="850" width="592" height="30"/>
   <object id="35" x="3200" y="770" width="272" height="12"/>
   <object id="36" x="3312" y="802" width="240" height="12"/>
-  <object id="37" x="3312" y="866" width="240" height="12"/>
+  <object id="37" x="3312" y="867" width="240" height="13"/>
   <object id="38" x="3904" y="706" width="240" height="12"/>
   <object id="39" x="2816" y="720" width="768" height="14"/>
   <object id="40" x="1664" y="432" width="256" height="14"/>
@@ -71,12 +71,8 @@
   <object id="61" x="2032" y="256" width="16" height="16"/>
   <object id="62" x="2048" y="240" width="16" height="78"/>
   <object id="63" x="2816" y="432" width="16" height="34"/>
-  <object id="64" x="2672" y="274" width="32" height="16"/>
-  <object id="66" x="2688" y="290" width="48" height="16"/>
-  <object id="68" x="2720" y="306" width="48" height="16"/>
-  <object id="69" x="2752" y="322" width="48" height="16"/>
-  <object id="70" x="2784" y="338" width="48" height="30"/>
-  <object id="71" x="2672" y="290" width="16" height="108"/>
+  <object id="70" x="2816" y="240" width="16" height="128"/>
+  <object id="71" x="2672" y="240" width="16" height="158"/>
   <object id="72" x="2688" y="384" width="16" height="14"/>
   <object id="73" x="2704" y="368" width="128" height="16"/>
   <object id="74" x="2752" y="384" width="16" height="14"/>
@@ -109,7 +105,7 @@
   <object id="104" x="560" y="626" width="32" height="12"/>
   <object id="105" x="656" y="562" width="32" height="64"/>
   <object id="106" x="672" y="546" width="16" height="16"/>
-  <object id="107" x="4144" y="718" width="16" height="132"/>
+  <object id="107" x="4129" y="718" width="16" height="132"/>
   <object id="1" x="512" y="382" width="16" height="52"/>
  </objectgroup>
  <objectgroup name="logic">
