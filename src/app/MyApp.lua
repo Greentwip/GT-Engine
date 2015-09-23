@@ -32,6 +32,7 @@ end
 
 function MyApp:initiate()
 
+    self:setup_social()
     self:setup_application()
     self:setup_tags()
     self:setup_callbacks()
@@ -45,6 +46,12 @@ function MyApp:initiate()
     self:setup_levels()
     self:setup_browners()
 
+end
+
+function MyApp:setup_social()
+    if device.platform == "android" then
+        sdkbox.PluginFacebook:init()
+    end
 end
 
 function MyApp:setup_callbacks()

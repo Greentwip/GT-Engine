@@ -27,10 +27,54 @@ function title:onLoad()
     self.text_:setPosition(cc.p(self.selector_:getPositionX() + self.selector_.sprite_:getContentSize().width,
                                 self.selector_:getPositionY() + self.text_.label_:getContentSize().height * 0.5))
 
+    if device.platform == "android" then
+
+        local tex_path = "sprites/core/social"
+
+        self.social_button_ = ccui.Button:create()
+        self.social_button_:setTouchEnabled(true)
+        self.social_button_:setSwallowTouches(false)
+        self.social_button_:loadTextures(tex_path.."/facebook/facebook_share.png", tex_path.."/facebook/facebook_share.png", "")
+        self.social_button_:setPosition(cc.p(display.left_top.x + self.social_button_:getContentSize().width,
+                                             display.left_top.y - self.social_button_:getContentSize().height))
+
+        self.social_button_:setPressedActionEnabled(true)
+        self.social_button_:onTouch(function(event)
+            if event.name == "began" then
+
+                local tex_path = "sprites/core/social"
+
+                local info
+                info.type  = "photo"
+                info.title = "I'm playing a Greentwip game!"
+                info.image = tex_path .. "/greentwip/greentwip_share.png"
+                sdkbox.PluginFacebook:share(info)
+            end
+        end)
+
+        self.social_button_:addTo(self)
+
+--        print("----------------------------")
+--        print(FB_PERM_PUBLISH_POST)
+
+
+        sdkbox.PluginFacebook:login()
+        sdkbox.PluginFacebook:requestPublishPermissions({FB_PERM_PUBLISH_POST})
+
+    end
+
+
+
     audio.playMusic("sounds/bgm_title.mp3", true)
 
     -- self variables
     self.triggered_ = false
+
+
+end
+
+function title:onSocial(event)
+
 end
 
 function title:step(dt)
