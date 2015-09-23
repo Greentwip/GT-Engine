@@ -239,6 +239,16 @@ function level_base:load(tmx_map, load_arguments)
     self.bullets_       = {}
 
     self.status_ = cc.level_status_.run_
+
+    self.joypad_:retain()
+
+    self:removeChild(self.joypad_, false)
+    cc.bounds_:addChild(self.joypad_)
+
+    self.joypad_:setPositionX(-cc.bounds_:width() * 0.5)
+    self.joypad_:setPositionY(-cc.bounds_:height() * 0.5)
+
+    self.joypad_:release()
 end
 
 function level_base:schedule_component(component)
@@ -252,7 +262,6 @@ function level_base:step(dt)
         self:load(self.tmx_map_, self.load_arguments_)
     else
         self.level_controller_:step(dt)
-        self:post_step(dt)
 
         for _, bullet in pairs(self.bullets_) do
             bullet:step(dt)
@@ -275,6 +284,9 @@ function level_base:step(dt)
             end
         end
     end
+
+    self:post_step(dt)
+
 
     return self
 end
