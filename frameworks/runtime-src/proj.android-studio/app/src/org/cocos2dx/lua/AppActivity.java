@@ -48,10 +48,6 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-// Add this to the header of your file:
-import com.facebook.FacebookSdk;
-
-
 
 public class AppActivity extends Cocos2dxActivity{
 
@@ -59,12 +55,7 @@ public class AppActivity extends Cocos2dxActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        // Initialize the SDK before executing any other operations,
-        // especially, if you're using Facebook UI elements.
-
-
+        
         if(nativeIsLandScape()) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
         } else {

@@ -7,7 +7,7 @@ local joypad = class("joypad", cc.Node)
 function joypad:ctor(layout)
     local platform = device.platform
 
-    local win_debug = true
+    local win_debug = false
 
     if platform == "windows" then
        win_debug = true
@@ -81,7 +81,6 @@ function joypad:ctor(layout)
         local function onTouchMoved(touch, event)
             self:onTouchMoved(touch, event)
         end
-
 
         if win_debug then
             local listener = cc.EventListenerMouse:create()
@@ -386,6 +385,7 @@ function joypad:onKeypad(keycode, keydown)
     end
 
     if translated_key ~= nil then
+
         if keydown then
             cc.keys_[translated_key].status_  = cc.KEY_STATUS.DOWN
             cc.keys_[translated_key].pressed_ = true
