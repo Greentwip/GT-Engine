@@ -199,7 +199,13 @@ function MyApp:setup_keyboard()
     cc.key_code_.down   = 5
     cc.key_code_.left   = 6
     cc.key_code_.right  = 7
-    cc.key_code_.none   = 8
+
+    cc.key_code_.up_right   = 8
+    cc.key_code_.up_left    = 9
+    cc.key_code_.down_left  = 10
+    cc.key_code_.down_right = 11
+
+    cc.key_code_.none   = 12
 
 
     cc.keys_ = {}

@@ -159,7 +159,7 @@ function joypad:onJoystick(event)
 
         if self.can_move_ then
 
-            if angle >= -30 and angle <= 30 then
+            if angle >= -45 and angle <= 45 then
                 if not self.in_range_ then
                     cc.keys_[cc.key_code_.right].status_  = cc.KEY_STATUS.DOWN
                     cc.keys_[cc.key_code_.right].pressed_ = true
@@ -174,7 +174,7 @@ function joypad:onJoystick(event)
                 end
             end
 
-            if math.abs(angle) >= 150 and math.abs(angle) <= 180 then
+            if math.abs(angle) >= 165 and math.abs(angle) <= 195 then
                 if not self.in_range_ then
                     cc.keys_[cc.key_code_.left].status_  = cc.KEY_STATUS.DOWN
                     cc.keys_[cc.key_code_.left].pressed_ = true
@@ -189,7 +189,7 @@ function joypad:onJoystick(event)
                 end
             end
 
-            if angle >= 60 and angle <= 120 then
+            if angle >= 75 and angle <= 135 then
                 if not self.in_range_ then
                     cc.keys_[cc.key_code_.up].status_  = cc.KEY_STATUS.DOWN
                     cc.keys_[cc.key_code_.up].pressed_ = true
@@ -204,7 +204,7 @@ function joypad:onJoystick(event)
                 end
             end
 
-            if angle <= -60 and angle >= -120 then
+            if angle <= -75 and angle >= -135 then
                 if not self.in_range_ then
                     cc.keys_[cc.key_code_.down].status_  = cc.KEY_STATUS.DOWN
                     cc.keys_[cc.key_code_.down].pressed_ = true

@@ -25,8 +25,18 @@
       <file leaf-file-name="joypad.lua" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/app/core/gameplay/ui/joypad.lua">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.3653603">
+              <caret line="222" column="11" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyApp.lua" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/MyApp.lua">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="122" column="100" selection-start-line="122" selection-start-column="100" selection-end-line="122" selection-end-column="100" />
+              <caret line="202" column="25" selection-start-line="202" selection-start-column="17" selection-end-line="202" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -90,8 +100,8 @@
         <option value="$PROJECT_DIR$/src/app/scenes/screens/title.lua" />
         <option value="$PROJECT_DIR$/src/app/scenes/special/intro.lua" />
         <option value="$PROJECT_DIR$/src/app/core/gameplay/control/layout_base.lua" />
-        <option value="$PROJECT_DIR$/src/app/MyApp.lua" />
         <option value="$PROJECT_DIR$/src/app/objects/gameplay/control/level_base.lua" />
+        <option value="$PROJECT_DIR$/src/app/MyApp.lua" />
         <option value="$PROJECT_DIR$/src/app/core/gameplay/ui/joypad.lua" />
       </list>
     </option>
@@ -803,8 +813,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="1176" extended-state="7" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1616" height="1176" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1171,14 +1181,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/MyApp.lua">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="199" column="27" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frameworks/cocos2d-x/cocos/2d/CCNode.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1248,10 +1250,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/core/gameplay/ui/joypad.lua">
+    <entry file="file://$PROJECT_DIR$/src/app/MyApp.lua">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="122" column="100" selection-start-line="122" selection-start-column="100" selection-end-line="122" selection-end-column="100" />
+          <caret line="202" column="25" selection-start-line="202" selection-start-column="17" selection-end-line="202" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/core/gameplay/ui/joypad.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.3653603">
+          <caret line="222" column="11" selection-start-line="222" selection-start-column="11" selection-end-line="222" selection-end-column="11" />
           <folding />
         </state>
       </provider>
