@@ -187,7 +187,7 @@ function joypad:onJoystick(event)
                 end
             end
 
-            if angle >= 150 and angle <= 120 then
+            if angle >= 120 and angle <= 150 then
                 if not self.in_range_ then
                     cc.keys_[cc.key_code_.up].status_  = cc.KEY_STATUS.DOWN
                     cc.keys_[cc.key_code_.up].pressed_ = true
