@@ -88,6 +88,19 @@ function joypad:ctor(layout)
             listener:registerScriptHandler(onTouchMoved, cc.Handler.EVENT_MOUSE_MOVE)
             layout:getScene():getEventDispatcher():addEventListenerWithSceneGraphPriority(listener, layout:getScene())
         else
+            local function onKeyPressed(keycode, event)
+                self:onKeypad(keycode, true)
+            end
+
+            local function onKeyReleased(keycode, event)
+                self:onKeypad(keycode, false)
+            end
+
+            local listener_keyboard = cc.EventListenerKeyboard:create()
+            listener_keyboard:registerScriptHandler(onKeyPressed, cc.Handler.EVENT_KEYBOARD_PRESSED)
+            listener_keyboard:registerScriptHandler(onKeyReleased, cc.Handler.EVENT_KEYBOARD_RELEASED)
+            layout:getScene():getEventDispatcher():addEventListenerWithSceneGraphPriority(listener_keyboard, layout:getScene())
+
             local listener = cc.EventListenerTouchOneByOne:create()
             listener:setSwallowTouches(false)
             listener:registerScriptHandler(onTouchBegan, cc.Handler.EVENT_TOUCH_BEGAN)
@@ -382,6 +395,8 @@ function joypad:onKeypad(keycode, keydown)
         translated_key = cc.key_code_.a
     elseif key == "KEY_X" then
         translated_key = cc.key_code_.b
+    elseif key == "KEY_ESCAPE" then
+        cc.Director:getInstance():endToLua()
     end
 
     if translated_key ~= nil then

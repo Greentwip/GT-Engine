@@ -33,7 +33,6 @@ function title:onLoad()
 
         self.social_button_ = ccui.Button:create()
         self.social_button_:setTouchEnabled(true)
-        self.social_button_:setSwallowTouches(false)
         self.social_button_:loadTextures(tex_path.."/facebook/facebook_share.png", tex_path.."/facebook/facebook_share.png", "")
         self.social_button_:setPosition(cc.p(display.left_top.x + self.social_button_:getContentSize().width,
                                              display.left_top.y - self.social_button_:getContentSize().height))
@@ -41,14 +40,16 @@ function title:onLoad()
         self.social_button_:setPressedActionEnabled(true)
         self.social_button_:onTouch(function(event)
             if event.name == "began" then
+                --[[
+                                local tex_path = "sprites/core/social"
 
-                local tex_path = "sprites/core/social"
+                                local info
+                                info.type  = "photo"
+                                info.title = "I'm playing a Greentwip game!"
+                                info.image = tex_path .. "/greentwip/greentwip_share.png"
+                                sdkbox.PluginFacebook:share(info)
+                                ]]--
 
-                local info
-                info.type  = "photo"
-                info.title = "I'm playing a Greentwip game!"
-                info.image = tex_path .. "/greentwip/greentwip_share.png"
-                sdkbox.PluginFacebook:share(info)
             end
         end)
 
@@ -57,13 +58,14 @@ function title:onLoad()
 --        print("----------------------------")
 --        print(FB_PERM_PUBLISH_POST)
 
-
-        sdkbox.PluginFacebook:login()
-        sdkbox.PluginFacebook:requestPublishPermissions({FB_PERM_PUBLISH_POST})
+        if sdkbox.PluginFacebook:isLoggedIn() then
+            self:post_to_profile()
+        else
+            sdkbox.PluginFacebook:login()
+            self:post_to_profile()
+        end
 
     end
-
-
 
     audio.playMusic("sounds/bgm_title.mp3", true)
 
@@ -71,6 +73,36 @@ function title:onLoad()
     self.triggered_ = false
 
 
+end
+
+function title:post_to_profile()
+    sdkbox.PluginFacebook:requestPublishPermissions({"publish_actions"})
+    local info = {};
+    info.type  = "link";
+    info.link  = "http://www.cocos2d-x.org";
+    info.title = "cocos2d-x";
+    info.text  = "Best Game Engine";
+    info.image = "http://cocos2d-x.org/images/logo.png";
+    sdkbox.PluginFacebook:share(info);
+
+--[[
+    local info;
+    info.type  = "link";
+    info.link  = "http://www.cocos2d-x.org";
+    info.title = "cocos2d-x";
+    info.text  = "Best Game Engine";
+    info.image = "http://cocos2d-x.org/images/logo.png";
+    sdkbox.PluginFacebook:dialog(info);]]--
+
+end
+
+function title:post_photo()
+
+    local info = {}
+    info.type  = "photo"
+    info.title = "I'm playing a Greentwip game!"
+    info.image = tex_path .. "/greentwip/greentwip_share.png"
+    sdkbox.PluginFacebook:share(info)
 end
 
 function title:onSocial(event)
