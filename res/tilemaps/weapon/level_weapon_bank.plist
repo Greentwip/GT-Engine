@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>level_weapon_bank.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{16,16}}</string>
+                <key>offset</key>
+                <string>{-376,0}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{16,16}}</string>
+                <key>sourceSize</key>
+                <string>{768,16}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>level_weapon_bank.pvr.ccz</string>
+            <key>size</key>
+            <string>{16,16}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:c680239fdb4822df012b6f4d84ef9b7f:582c1884f6b032a2fcd7a667311b55ba:71e107fc10bd388c21e728fe3ce9e59c$</string>
+            <key>textureFileName</key>
+            <string>level_weapon_bank.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

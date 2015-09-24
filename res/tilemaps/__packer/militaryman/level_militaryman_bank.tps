@@ -4,9 +4,9 @@
         <key>fileFormatVersion</key>
         <int>3</int>
         <key>texturePackerVersion</key>
-        <string>3.9.2</string>
+        <string>3.9.3</string>
         <key>fileName</key>
-        <string>C:/dev/projects/greentwip/codycobain/revenge_of_the_future/res/sprites/screens/opening/flematico/__packer/flematico_logo.tps</string>
+        <string>C:/dev/projects/greentwip/Pirates/res/tilemaps/__packer/militaryman/level_militaryman_bank.tps</string>
         <key>autoSDSettings</key>
         <array>
             <struct type="AutoSDSettings">
@@ -72,11 +72,11 @@
             </struct>
         </struct>
         <key>shapePadding</key>
-        <uint>2</uint>
+        <uint>0</uint>
         <key>jpgQuality</key>
         <uint>80</uint>
         <key>pngOptimizationLevel</key>
-        <uint>0</uint>
+        <uint>1</uint>
         <key>webpQualityLevel</key>
         <uint>101</uint>
         <key>textureSubPath</key>
@@ -84,13 +84,13 @@
         <key>textureFormat</key>
         <enum type="SettingsBase::TextureFormat">pvr3ccz</enum>
         <key>borderPadding</key>
-        <uint>2</uint>
+        <uint>0</uint>
         <key>maxTextureSize</key>
         <QSize>
             <key>width</key>
-            <int>1024</int>
+            <int>2048</int>
             <key>height</key>
-            <int>1024</int>
+            <int>2048</int>
         </QSize>
         <key>fixedTextureSize</key>
         <QSize>
@@ -147,7 +147,7 @@
             <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename>../flematico_logo.plist</filename>
+                <filename>../../militaryman/level_militaryman_bank.plist</filename>
             </struct>
         </map>
         <key>multiPack</key>
@@ -164,7 +164,7 @@
         <key>autoAliasEnabled</key>
         <true/>
         <key>trimSpriteNames</key>
-        <true/>
+        <false/>
         <key>prependSmartFolderName</key>
         <false/>
         <key>cleanTransparentPixels</key>
@@ -190,7 +190,7 @@
         </struct>
         <key>fileList</key>
         <array>
-            <filename>./</filename>
+            <filename>level_militaryman_bank.png</filename>
         </array>
         <key>ignoreFileList</key>
         <array/>

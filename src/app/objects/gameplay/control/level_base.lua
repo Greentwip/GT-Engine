@@ -120,7 +120,7 @@ function level_base:load(tmx_map, load_arguments)
     -- add enemy group
     local enemy_group = map:getObjectGroup("enemies")
 
-    if enemy_group ~= nil then
+    if enemy_group ~= nil and false then
         group_array = enemy_group:getObjects()
 
         for  i = 1, #group_array do

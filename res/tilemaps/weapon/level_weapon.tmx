@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="32" height="24" tilewidth="16" tileheight="16" nextobjectid="3">
- <tileset firstgid="1" name="level_weapon_bank.png" tilewidth="16" tileheight="16">
-  <image source="level_weapon_bank.png" width="768" height="16"/>
+ <tileset firstgid="1" name="level_weapon_bank.pvr.ccz" tilewidth="16" tileheight="16">
+  <image source="level_weapon_bank.pvr.ccz" width="768" height="16"/>
  </tileset>
  <layer name="layout" width="32" height="24">
-  <data encoding="base64" compression="gzip">
-   H4sIAAAAAAAAC+3NsQ0AAAzCMPj/6d5QsdpS5jRJh1bL29/f39/fH4CfA566aU0ADAAA
+  <data encoding="base64" compression="zlib">
+   eJztzbENAAAMwjD4/+neULHaUuY0SYdWy9vf39/f3x+AnwOaKQDh
   </data>
  </layer>
  <objectgroup name="blocks">

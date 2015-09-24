@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.0" orientation="orthogonal" renderorder="right-down" width="259" height="56" tilewidth="16" tileheight="16" nextobjectid="16">
- <tileset firstgid="1" name="level_vineman_bank.png" tilewidth="16" tileheight="16" spacing="2" margin="1">
-  <image source="level_vineman_bank.png" width="864" height="164"/>
+ <tileset firstgid="1" name="level_vineman_bank.pvr.ccz" tilewidth="16" tileheight="16" spacing="2" margin="1">
+  <image source="level_vineman_bank.pvr.ccz" width="864" height="164"/>
  </tileset>
  <layer name="layout" width="259" height="56">
   <data encoding="base64" compression="zlib">

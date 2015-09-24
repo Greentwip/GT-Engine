@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>frames</key>
+        <dict>
+            <key>level_vineman_bank.png</key>
+            <dict>
+                <key>frame</key>
+                <string>{{0,0},{864,162}}</string>
+                <key>offset</key>
+                <string>{0,1}</string>
+                <key>rotated</key>
+                <false/>
+                <key>sourceColorRect</key>
+                <string>{{0,0},{864,162}}</string>
+                <key>sourceSize</key>
+                <string>{864,164}</string>
+            </dict>
+        </dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>2</integer>
+            <key>realTextureFileName</key>
+            <string>level_vineman_bank.pvr.ccz</string>
+            <key>size</key>
+            <string>{864,162}</string>
+            <key>smartupdate</key>
+            <string>$TexturePacker:SmartUpdate:e764eecd2b7cc084e6d71c7eee6c2996:4fb6ef85ef6a640b40381936280f3c43:2ec6d4935be665c21d2af47e84aae79a$</string>
+            <key>textureFileName</key>
+            <string>level_vineman_bank.pvr.ccz</string>
+        </dict>
+    </dict>
+</plist>

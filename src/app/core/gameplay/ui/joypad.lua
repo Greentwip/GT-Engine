@@ -10,7 +10,7 @@ function joypad:ctor(layout)
     local win_debug = false
 
     if platform == "windows" then
-       win_debug = true
+       --win_debug = false
     end
 
     if (platform == "windows" or platform == "mac") and not win_debug then

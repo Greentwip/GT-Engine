@@ -77,14 +77,15 @@ end
 
 function title:post_to_profile()
     sdkbox.PluginFacebook:requestPublishPermissions({"publish_actions"})
-    local info = {};
+--[[
+     local info = {};
     info.type  = "link";
     info.link  = "http://www.cocos2d-x.org";
     info.title = "cocos2d-x";
     info.text  = "Best Game Engine";
     info.image = "http://cocos2d-x.org/images/logo.png";
     sdkbox.PluginFacebook:share(info);
-
+]]--
 --[[
     local info;
     info.type  = "link";
