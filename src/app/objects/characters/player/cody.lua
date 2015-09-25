@@ -283,7 +283,7 @@ function cody:stun(damage)
         self.current_browner_.charge_power_ = "low"
         self.shared_variables_.charging_ = false
 
-        local delay = cc.DelayTime:create(self.sprite_:get_action_duration("hurt"))
+        local delay = cc.DelayTime:create(self.current_browner_:get_action_duration("hurt"))
 
         if not self.shared_variables_.sliding_ then
             self.shared_variables_.speed_.x = -4 * self.current_browner_:get_sprite_normal().x
@@ -293,7 +293,7 @@ function cody:stun(damage)
             self.shared_variables_.stunned_ = false
         end)
 
-        local blink = cc.Blink:create(self.sprite_:get_action_duration("hurt"), 8)
+        local blink = cc.Blink:create(self.current_browner_:get_action_duration("hurt"), 8)
 
         local blink_callback = cc.CallFunc:create(function()
             if not self:isVisible() then

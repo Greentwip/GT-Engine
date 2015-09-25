@@ -40,15 +40,15 @@ function title:onLoad()
         self.social_button_:setPressedActionEnabled(true)
         self.social_button_:onTouch(function(event)
             if event.name == "began" then
-                --[[
-                                local tex_path = "sprites/core/social"
 
-                                local info
-                                info.type  = "photo"
-                                info.title = "I'm playing a Greentwip game!"
-                                info.image = tex_path .. "/greentwip/greentwip_share.png"
-                                sdkbox.PluginFacebook:share(info)
-                                ]]--
+                local tex_path = "sprites/core/social"
+
+                local info
+                info.type  = "photo"
+                info.title = "I'm playing a Greentwip game!"
+                info.image = tex_path .. "/greentwip/greentwip_share.png"
+                sdkbox.PluginFacebook:share(info)
+
 
             end
         end)
@@ -77,7 +77,7 @@ end
 
 function title:post_to_profile()
     sdkbox.PluginFacebook:requestPublishPermissions({"publish_actions"})
---[[
+
      local info = {};
     info.type  = "link";
     info.link  = "http://www.cocos2d-x.org";
@@ -85,15 +85,15 @@ function title:post_to_profile()
     info.text  = "Best Game Engine";
     info.image = "http://cocos2d-x.org/images/logo.png";
     sdkbox.PluginFacebook:share(info);
-]]--
---[[
+
+
     local info;
     info.type  = "link";
     info.link  = "http://www.cocos2d-x.org";
     info.title = "cocos2d-x";
     info.text  = "Best Game Engine";
     info.image = "http://cocos2d-x.org/images/logo.png";
-    sdkbox.PluginFacebook:dialog(info);]]--
+    sdkbox.PluginFacebook:dialog(info);
 
 end
 
