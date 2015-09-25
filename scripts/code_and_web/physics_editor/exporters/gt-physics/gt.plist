@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+        </dict>
+        <key>category_names</key>
+        <array>{% for bit in global.collision_bitfield %}
+            <string>{{bit}}</string>{% endfor %}
+        </array>
+        <key>bodies</key>
+        <dict>
+{% for body in bodies %}
+            <key>{{body.name}}</key>
+            <dict>
+                <key>size</key>
+                <string>{ {{body.size.width|floatformat:5}},{{body.size.height|floatformat:5}} }</string>
+                <key>anchorpoint</key>
+                <string>{ {{body.anchorPointRel.x|floatformat:5}},{{body.anchorPointRel.y|floatformat:5}} }</string>
+                <key>is_dynamic</key>
+                {% if body.is_dynamic %}<true/>{% else %}<false/>{% endif %}
+                <key>affected_by_gravity</key>
+                {% if body.affected_by_gravity %}<true/>{% else %}<false/>{% endif %}
+                <key>allows_rotation</key>
+                {% if body.allows_rotation %}<true/>{% else %}<false/>{% endif %}
+                <key>linear_damping</key>
+                <real>{{body.linear_damping}}</real>
+                <key>velocity_limit</key>
+                <real>{{body.velocity_limit}}</real>
+                <key>angular_damping</key>
+                <real>{{body.angular_damping}}</real>
+                <key>angular_velocity_limit</key>
+                <real>{{body.angular_velocity_limit}}</real>
+                <key>fixtures</key>
+                <array>
+{% for fixture in body.fixtures %}
+                    <dict>
+                        <key>density</key>
+                        <real>{{fixture.density}}</real>
+                        <key>restitution</key>
+                        <real>{{fixture.restitution}}</real>
+                        <key>friction</key>
+                        <real>{{fixture.friction}}</real>
+                        <key>tag</key>
+                        <integer>{{fixture.tag}}</integer>
+                        <key>group</key>
+                        <integer>{{fixture.group}}</integer>
+                        <key>category_mask</key>
+                        <integer>{{fixture.category_mask}}</integer>
+                        <key>collision_mask</key>
+                        <integer>{{fixture.collision_mask}}</integer>
+                        <key>contact_test_mask</key>
+                        <integer>{{fixture.contact_test_mask}}</integer>
+                        <key>fixture_type</key>
+                        <string>{{fixture.type}}</string>
+                        {% if fixture.isCircle %}
+                        <key>circle</key>
+                        <dict>
+                            <key>radius</key>
+                            <real>{{fixture.radius|floatformat:3}}</real>
+                            <key>position</key>
+                            <string>{ {{fixture.center.x|floatformat:3}},{{fixture.center.y|floatformat:3}} }</string>
+                        </dict>
+                        {% else %}
+                        <key>polygons</key>
+                        <array>{% for polygon in fixture.polygons %}
+                            <array>{% for point in polygon %}
+                                <string>{ {{point.x|floatformat:5}},{{point.y|floatformat:5}} }</string>{% endfor %}
+                            </array>{% endfor %}
+                        </array>
+                        {% endif %}
+                    </dict>
+{% endfor %}
+                </array>
+            </dict>
+{% endfor %}
+        </dict>
+    </dict>
+</plist>
+
+
+
+

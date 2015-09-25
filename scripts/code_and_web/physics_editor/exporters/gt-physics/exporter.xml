@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<exporter>
+    <name>gt</name>
+    <displayName>GT - Physics</displayName>
+    <description>GT exporter for Cocos2d-x</description>
+    <version>1.0</version>
+    <yAxisDirection>up</yAxisDirection>
+    <physicsEngine>chipmunk</physicsEngine>
+    <template>gt.plist</template>
+    <fileExtension>plist</fileExtension>
+    <anchorPoint>
+        <enabled>yes</enabled>
+        <relX>0.5</relX>
+        <relY>0.5</relY>
+    </anchorPoint>
+    <origin>
+        <type>fixed</type>
+        <relX>0.5</relX>
+        <relY>0.5</relY>
+    </origin>
+    <global>
+    </global>
+
+    <!-- body settings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+    <body>
+        <parameter>
+            <name>is_dynamic</name>
+            <displayName>Dynamic body</displayName>
+            <description>A non-dynamic body is immovable such as a wall or the ground.</description>
+            <type>bool</type>
+            <default>true</default>
+		</parameter>
+        <parameter>
+            <name>affected_by_gravity</name>
+            <displayName>Affected by gravity</displayName>
+            <description>Affected by gravity flag.</description>
+            <type>bool</type>
+            <default>true</default>
+		</parameter>
+        <parameter>
+            <name>allows_rotation</name>
+            <displayName>Allows rotation</displayName>
+            <description>Allow body rotation flag.</description>
+            <type>bool</type>
+            <default>true</default>
+		</parameter>
+        <parameter>
+            <name>linear_damping</name>
+            <displayName>Linear damping</displayName>
+            <description>Used to simulate fluid or air friction forces on the body.</description>
+            <type>float</type>
+            <default>0.0</default>
+        </parameter>
+        <parameter>
+            <name>velocity_limit</name>
+            <displayName>Velocity limit </displayName>
+            <description>Maximum velocity on the body.</description>
+            <type>float</type>
+            <default>1000000.0</default>
+        </parameter>
+        <parameter>
+            <name>angular_damping</name>
+            <displayName>Angular damping</displayName>
+            <description>Used to simulate fluid or air friction forces on the body.</description>
+            <type>float</type>
+            <default>0.0</default>
+        </parameter>
+        <parameter>
+            <name>angular_velocity_limit</name>
+            <displayName>Angular velocity limit </displayName>
+            <description>Maximum angular velocity on the body.</description>
+            <type>float</type>
+            <default>1000000.0</default>
+        </parameter>
+    </body>
+
+    <fixture>
+        <!-- fixture physics settings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <parameter>
+            <name>density</name>
+            <displayName>Density</displayName>
+            <description>Density of the physics shape.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>restitution</name>
+            <displayName>Restitution</displayName>
+            <description>Changes the elasticity of the physics shape.</description>
+            <type>float</type>
+            <min>0</min>
+            <max>1000</max>
+            <default>0.2</default>
+        </parameter>
+        <parameter>
+            <name>friction</name>
+            <displayName>Friction</displayName>
+            <description>Surface friction of the shape.</description>
+            <type>float</type>
+            <min>0</min>
+            <max>1000</max>
+            <default>0.7</default>
+        </parameter>
+        <parameter>
+            <name>tag</name>
+            <displayName>Tag</displayName>
+            <description>An interger number that identifies a shape object.</description>
+            <type>int</type>
+        </parameter>
+
+        <!-- fixture collision settings ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+        <parameter>
+            <name>group</name>
+            <displayName>Collision group</displayName>
+            <description>If two physics bodies share the same group id, they always collide (positive value) or never collide (negative value).</description>
+            <type>int</type>
+        </parameter>
+        <parameter>
+            <name>collision_bitfield</name>
+            <type>bitfield</type>
+            <size>32</size>
+        </parameter>
+        <parameter>
+            <name>category_mask</name>
+            <displayName>Category</displayName>
+            <description>An array of category names of which this shape is a member.</description>
+            <type>uint</type>
+            <default>0</default>
+            <bitfield>yes</bitfield>
+        </parameter>
+        <parameter>
+            <name>collision_mask</name>
+            <displayName>Collision</displayName>
+            <description>An array of category names that this shape wants to collide with.</description>
+            <type>uint</type>
+            <default>0</default>
+            <bitfield>yes</bitfield>
+        </parameter>
+        <parameter>
+            <name>contact_test_mask</name>
+            <displayName>Contact</displayName>
+            <description>An array of category names that cause intersection notifications.</description>
+            <type>uint</type>
+            <default>0</default>
+            <bitfield>yes</bitfield>
+        </parameter>
+
+	</fixture>
+</exporter>

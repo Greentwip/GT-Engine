@@ -1,13 +1,9 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner                = import("app.objects.characters.player.browners.base.browner")
+local night_browner = import("app.objects.characters.player.browners.base.browner").create("night_browner")
 local sliding_flame_bullet     = import("app.objects.weapons.browners.night.sliding_flame_bullet")
 
-local night_browner = class("night_browner", browner)
-
-function night_browner:ctor(sprite)
-    self.super:ctor(sprite)
-
+function night_browner:bake()
     -- constraints
     self.can_slide_         = false
     self.can_charge_        = false
@@ -25,7 +21,7 @@ function night_browner:ctor(sprite)
     actions[#actions + 1] = {name = "climb",      animation = {name = "night_climb",       forever = true,  delay = 0.16} }
     actions[#actions + 1] = {name = "hurt",       animation = {name = "night_hurt",        forever = false, delay = 0.02} }
 
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
 
     self.browner_id_ = cc.browners_.night_.id_       -- overriden from parent
 end

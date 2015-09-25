@@ -1,13 +1,8 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner = import("app.objects.characters.player.browners.base.browner")
+local fuzzy_browner = import("app.objects.characters.player.browners.base.browner").create("fuzzy_browner")
 
-local fuzzy_browner = class("fuzzy_browner", browner)
-
-
-function fuzzy_browner:ctor(sprite)
-    self.super:ctor(sprite)
-
+function fuzzy_browner:bake()
     self.base_name_ = "violet"
 
     local actions = {}
@@ -21,7 +16,7 @@ function fuzzy_browner:ctor(sprite)
     actions[#actions + 1] = {name = "jumpshoot",  animation = {name = "violet_jumpshoot",   forever = false, delay = 0.10} }
     actions[#actions + 1] = {name = "hurt",       animation = {name = "violet_hurt",        forever = false, delay = 0.02} }
 
-    self.sprite_:load_actions_set(actions, true)
+    self.sprite_:load_actions_set(actions, false)
 
     self.browner_id_ = cc.browners_.fuzzy_.id_       -- overriden from parent
 end

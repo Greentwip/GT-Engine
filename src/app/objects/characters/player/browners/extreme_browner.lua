@@ -1,15 +1,10 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner = import("app.objects.characters.player.browners.base.browner")
-
-local extreme_browner = class("extreme_browner", browner)
-
+local extreme_browner = import("app.objects.characters.player.browners.base.browner").create("extreme_browner")
 local extreme_bullet = import("app.objects.weapons.browners.extreme.extreme_bullet")
 
 
-function extreme_browner:ctor(sprite)
-    self.super:ctor(sprite)
-
+function extreme_browner:bake()
     -- constraints
     self.can_slide_     = false
     self.can_charge_    = false
@@ -26,7 +21,7 @@ function extreme_browner:ctor(sprite)
     actions[#actions + 1] = {name = "jumpshoot",  animation = {name = "extreme_jumpshoot",   forever = false, delay = 0.10} }
     actions[#actions + 1] = {name = "hurt",       animation = {name = "extreme_hurt",        forever = false, delay = 0.02} }
 
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
 
     self.browner_id_ = cc.browners_.extreme_.id_       -- overriden from parent
 end
@@ -38,19 +33,16 @@ function extreme_browner:fire()
     audio.playSound("sounds/sfx_buster_shoot_high.wav", false)
 
     local bullet_position = cc.p(self:getParent():getPositionX() + (bullet_offset * self:get_sprite_normal().x),
-                                 self:getParent():getPositionY() + 16)
+        self:getParent():getPositionY() + 16)
 
     local bullet = extreme_bullet:create()
-                                 :setPosition(bullet_position)
-                                 :setup("gameplay", "level", "weapon", "extreme_bullet")
-                                 :init_weapon(self:get_sprite_normal().x, self.weapon_tag_)
-                                 :addTo(self:getParent():getParent())
+    :setPosition(bullet_position)
+    :setup("gameplay", "level", "weapon", "extreme_bullet")
+    :init_weapon(self:get_sprite_normal().x, self.weapon_tag_)
+    :addTo(self:getParent():getParent())
 
     self:getParent():getParent().bullets_[bullet] = bullet
 end
 
 
 return extreme_browner
-
-
-

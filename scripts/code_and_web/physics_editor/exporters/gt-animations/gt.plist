@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>metadata</key>
+        <dict>
+            <key>format</key>
+            <integer>1</integer>
+        </dict>
+        <key>definitions</key>
+        <dict>
+{% for body in bodies %}
+            <key>{{body.name}}</key>
+            <dict>
+                <key>size</key>
+                <string>{ {{body.size.width|floatformat:5}},{{body.size.height|floatformat:5}} }</string>
+                <key>anchor</key>
+                <string>{ {{body.anchorPointRel.x|floatformat:5}},{{body.anchorPointRel.y|floatformat:5}} }</string>
+            </dict>
+{% endfor %}
+        </dict>
+    </dict>
+</plist>
+
+
+
+

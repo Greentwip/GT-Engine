@@ -53,6 +53,22 @@ function kinematic_character.create(class_name)
 
     end
 
+    function character:sprite_from(category, subcategory, package, cname)
+
+        local sprite_path       = "sprites/" .. category .. "/" .. subcategory .. "/" .. package .. "/" .. cname .. "/" .. cname
+
+        local new_sprite
+
+        if cc.FileUtils:getInstance():isFileExist(sprite_path .. ".plist") then
+            new_sprite = sprite:create(sprite_path, cc.p(0.5, 0.0))
+                               :setPosition(cc.p(0, 0))
+                               :addTo(self)
+        end
+
+        return new_sprite
+
+    end
+
     -- must implement function character:animate in children if children has animations.
 
     function character:articulate(physics_path, cname)

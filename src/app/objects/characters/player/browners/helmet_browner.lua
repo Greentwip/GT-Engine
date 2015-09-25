@@ -1,12 +1,8 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner = import("app.objects.characters.player.browners.base.browner")
+local helmet_browner = import("app.objects.characters.player.browners.base.browner").create("helmet_browner")
 
-local helmet_browner = class("helmet_browner", browner)
-
-function helmet_browner:ctor(sprite)
-    self.super:ctor(sprite)
-
+function helmet_browner:bake()
     self.base_name_ = "helmet"
 
     local actions = {}
@@ -20,7 +16,7 @@ function helmet_browner:ctor(sprite)
     actions[#actions + 1] = {name = "walkshoot",  animation = {name = "helmet_walkshoot",   forever = true,  delay = 0.12} }
     actions[#actions + 1] = {name = "jumpshoot",  animation = {name = "helmet_jumpshoot",   forever = false, delay = 0.10} }
 
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
 
     self.browner_id_ = cc.browners_.helmet_.id_       -- overriden from parent
 end

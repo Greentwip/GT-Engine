@@ -1,10 +1,8 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner           = import("app.objects.characters.player.browners.base.browner")
-local teleport_browner  = class("teleport_browner", browner)
+local teleport_browner = import("app.objects.characters.player.browners.base.browner").create("teleport_browner")
 
-function teleport_browner:ctor(sprite)
-    self.super:ctor(sprite)
+function teleport_browner:bake()
 
     -- constraints
     self.can_attack_    = false
@@ -18,9 +16,10 @@ function teleport_browner:ctor(sprite)
 
     local actions = {}
     actions[#actions + 1] = {name = "jump",      animation = {name = "teleport_jump",       forever = true, delay = 0.12} }
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
 
     self.browner_id_ = cc.browners_.teleport_.id_       -- overriden from parent
+    return self
 end
 
 function teleport_browner:spawn()

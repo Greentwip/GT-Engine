@@ -99,7 +99,7 @@ function level_base:load(tmx_map, load_arguments)
     --------------------------------
     -- player
     local player = cody:create()
-                       :setup("characters", "player", "regular", "browners")
+                       :setup("characters", "player", "regular/browners", "violet")
                        :addTo(self, 512)
 
 
@@ -120,7 +120,7 @@ function level_base:load(tmx_map, load_arguments)
     -- add enemy group
     local enemy_group = map:getObjectGroup("enemies")
 
-    if enemy_group ~= nil and false then
+    if enemy_group ~= nil then
         group_array = enemy_group:getObjects()
 
         for  i = 1, #group_array do

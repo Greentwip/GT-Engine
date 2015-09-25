@@ -1,12 +1,9 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner                   = import("app.objects.characters.player.browners.base.browner")
+local military_browner = import("app.objects.characters.player.browners.base.browner").create("military_browner")
 local linear_missile_bullet     = import("app.objects.weapons.browners.military.linear_missile_bullet")
 
-local military_browner = class("military_browner", browner)
-
-function military_browner:ctor(sprite)
-    self.super:ctor(sprite)
+function military_browner:bake()
 
     -- constraints
     self.can_slide_         = false
@@ -25,14 +22,18 @@ function military_browner:ctor(sprite)
     actions[#actions + 1] = {name = "climb",      animation = {name = "military_climb",       forever = true,  delay = 0.16} }
     actions[#actions + 1] = {name = "hurt",       animation = {name = "military_hurt",        forever = false, delay = 0.02} }
 
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
 
     self.browner_id_ = cc.browners_.military_.id_       -- overriden from parent
 end
 
 function military_browner:attack()
 
-    if self:getParent():attack_condition() and not self.jumping_ and not self.walking_ and not self.stunned_ and not self.attacking_ then
+    if self:getParent():attack_condition()
+            and not self.shared_variables_.jumping_
+            and not self.shared_variables_.walking_
+            and not self.shared_variables_.stunned_
+            and not self.shared_variables_.attacking_ then
 
         if self.energy_ > 0 then
 

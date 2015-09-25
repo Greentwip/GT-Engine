@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<exporter>
+    <name>GT - Animations</name>
+    <displayName>GT - Animations</displayName>
+    <description>GT exporter for Cocos2d-x</description>
+    <version>1.0</version>
+    <yAxisDirection>up</yAxisDirection>
+    <physicsEngine>chipmunk</physicsEngine>
+    <template>gt.plist</template>
+    <fileExtension>plist</fileExtension>
+    <anchorPoint>
+        <enabled>yes</enabled>
+        <relX>0.5</relX>
+        <relY>0.5</relY>
+    </anchorPoint>
+    <origin>
+        <type>fixed</type>
+        <relX>0.5</relX>
+        <relY>0.5</relY>
+    </origin>
+    <global>
+    </global>
+</exporter>

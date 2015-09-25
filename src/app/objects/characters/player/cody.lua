@@ -3,6 +3,7 @@
 local cody = import("app.core.physics.kinematic_character").create("cody")
 
 local violet_browner    = import("app.objects.characters.player.browners.violet_browner")
+
 local fuzzy_browner     = import("app.objects.characters.player.browners.fuzzy_browner")
 local helmet_browner    = import("app.objects.characters.player.browners.helmet_browner")
 local vine_browner      = import("app.objects.characters.player.browners.vine_browner")
@@ -62,48 +63,66 @@ end
 
 function cody:init_browners()
 
+    self.shared_variables_ = {
+        walking_        = false,
+        jumping_        = false,
+        dash_jumping_   = false,
+        sliding_        = false,
+        climbing_       = false,
+        attacking_      = false,
+        charging_       = false,
+        stunned_        = false,
+        on_ground_      = false,
+        speed_          = cc.p(0,0)
+    }
+
     self.browners_ = {}
 
-    self.browners_[cc.browners_.violet_.id_] = violet_browner:create(self.sprite_)
+    self.browners_[cc.browners_.violet_.id_]    = violet_browner:create(self.sprite_, self.shared_variables_)
                                                              :addTo(self)
 
-    self.browners_[cc.browners_.fuzzy_.id_] = fuzzy_browner:create(self.sprite_)
+    self.browners_[cc.browners_.fuzzy_.id_]     = fuzzy_browner:create(self:sprite_from("characters", "player", "regular/browners", "violet"),
+                                                                       self.shared_variables_)
                                                            :addTo(self)
 
-    self.browners_[cc.browners_.sheriff_.id_] = sheriff_browner:create(self.sprite_)
+    self.browners_[cc.browners_.sheriff_.id_]   = sheriff_browner:create(self:sprite_from("characters", "player", "regular/browners", "sheriff"),
+                                                                         self.shared_variables_)
                                                                :addTo(self)
 
-    self.browners_[cc.browners_.military_.id_] = military_browner:create(self.sprite_)
+    self.browners_[cc.browners_.military_.id_]  = military_browner:create(self:sprite_from("characters", "player", "regular/browners", "military"),
+                                                                          self.shared_variables_)
                                                                  :addTo(self)
 
-    self.browners_[cc.browners_.vine_.id_] = vine_browner:create(self.sprite_)
-                                                         :addTo(self)
+    self.browners_[cc.browners_.vine_.id_]      = vine_browner:create(self:sprite_from("characters", "player", "regular/browners", "vine"),
+                                                                      self.shared_variables_)
+                                                              :addTo(self)
 
-    self.browners_[cc.browners_.night_.id_] = night_browner:create(self.sprite_)
-                                                           :addTo(self)
-
-    self.browners_[cc.browners_.helmet_.id_] = helmet_browner:create(self.sprite_)
-                                                             :addTo(self)
-
-    self.browners_[cc.browners_.extreme_.id_] = extreme_browner:create(self.sprite_)
+    self.browners_[cc.browners_.night_.id_]     = night_browner:create(self:sprite_from("characters", "player", "regular/browners", "night"),
+                                                                       self.shared_variables_)
                                                                :addTo(self)
 
+    self.browners_[cc.browners_.helmet_.id_]    = helmet_browner:create(self:sprite_from("characters", "player", "regular/browners", "helmet"),
+                                                                        self.shared_variables_)
+                                                             :addTo(self)
+
+    self.browners_[cc.browners_.extreme_.id_]   = extreme_browner:create(self:sprite_from("characters", "player", "regular/browners", "extreme"),
+                                                                         self.shared_variables_)
+                                                                 :addTo(self)
+
+    -- teleport browner has no stand action
+    self.browners_[cc.browners_.teleport_.id_]  = teleport_browner:create(self:sprite_from("characters", "player", "regular/browners", "teleport"),
+                                                                          self.shared_variables_)
+                                                                  :addTo(self)
+
     for _, v in pairs(self.browners_) do
+        v:bake()
         v:deactivate()
         v:setPosition(cc.p(0, 0))
         v:run_action("stand")
         v.weapon_tag_ = cc.tags.weapon.player
     end
 
-    -- teleport browner has no stand action
-    self.browners_[cc.browners_.teleport_.id_] = teleport_browner:create(self.sprite_)
-                                                                 :setPosition(cc.p(0, 0))
-                                                                 :addTo(self)
-
     self:switch_browner(cc.browners_.teleport_.id_)
-
-    self.current_browner_:activate()
-    self.current_browner_:run_action("jump")
 
     -- we need the player's collision contact information for a certain set of browners
     -- violet, helmet and fuzzy need them for sliding
@@ -117,9 +136,9 @@ function cody:spawn()
 
     for _, v in pairs(self.browners_) do
         v:deactivate()
-        v.charging_ = false
+        v.shared_variables_.charging_ = false   --@todo reset color
         v.charge_power_ = "low"
-        v.stunned_ = false
+        v.shared_variables_.stunned_ = false
         v:setPosition(cc.p(0, 0))
         v:run_action("stand")
         v.weapon_tag_ = cc.tags.weapon.player
@@ -129,7 +148,7 @@ function cody:spawn()
 
 
     self.sprite_:setFlippedX(false)
-    self.sprite_:setVisible(true)
+--    self.sprite_:setVisible(true)
     self.current_browner_:activate()
 
     self.alive_ = true
@@ -142,12 +161,9 @@ function cody:switch_browner(id)
 
     if self.current_browner_ ~= nil then
         self.current_browner_:deactivate()
-        ground_backup = self.current_browner_.on_ground_
     end
 
     local new_browner = self.browners_[id]
-
-    new_browner.on_ground_ = ground_backup
 
     self.current_browner_ = new_browner
     self.current_browner_:activate()
@@ -256,25 +272,25 @@ function cody:on_after_blink()
 end
 
 function cody:stun(damage)
-    if not self.current_browner_.stunned_ and self.vulnerable_ then
+    if not self.shared_variables_.stunned_ and self.vulnerable_ then
         audio.playSound("sounds/sfx_hit.wav", false)
 
         self.health_ = self.health_ - damage
 
-        self.current_browner_.stunned_ = true
+        self.shared_variables_.stunned_ = true
         self.vulnerable_ = false
 
         self.current_browner_.charge_power_ = "low"
-        self.current_browner_.charging_ = false
+        self.shared_variables_.charging_ = false
 
         local delay = cc.DelayTime:create(self.sprite_:get_action_duration("hurt"))
 
-        if not self.current_browner_.sliding_ then
-            self.current_browner_.speed_.x = -4 * self.current_browner_:get_sprite_normal().x
+        if not self.shared_variables_.sliding_ then
+            self.shared_variables_.speed_.x = -4 * self.current_browner_:get_sprite_normal().x
         end
 
         local callback = cc.CallFunc:create(function()
-            self.current_browner_.stunned_ = false
+            self.shared_variables_.stunned_ = false
         end)
 
         local blink = cc.Blink:create(self.sprite_:get_action_duration("hurt"), 8)
@@ -395,25 +411,25 @@ end
 
 function cody:move()
 
-    self.current_browner_.speed_ = self.kinematic_body_.body_:getVelocity()
+    self.shared_variables_.speed_ = self.kinematic_body_.body_:getVelocity()
 
     if self.contacts_[cc.kinematic_contact_.down] then
-        self.current_browner_.speed_.y = 0
+        self.shared_variables_.speed_.y = 0
 
-        if not self.current_browner_.on_ground_ and not self.current_browner_.climbing_ then
-            self.current_browner_.on_ground_    = true
-            self.current_browner_.dash_jumping_ = false
-            self.current_browner_.jumping_      = false
+        if not self.shared_variables_.on_ground_ and not self.shared_variables_.climbing_ then
+            self.shared_variables_.on_ground_    = true
+            self.shared_variables_.dash_jumping_ = false
+            self.shared_variables_.jumping_      = false
             audio.playSound("sounds/sfx_land.wav", false)
         end
     else
-        self.current_browner_.on_ground_ = false
-        self.current_browner_.jumping_  = true
+        self.shared_variables_.on_ground_ = false
+        self.shared_variables_.jumping_  = true
     end
 
     if self.contacts_[cc.kinematic_contact_.up] then
-        if self.current_browner_.speed_.y > 0 then
-            self.current_browner_.speed_.y = -1
+        if self.shared_variables_.speed_.y > 0 then
+            self.shared_variables_.speed_.y = -1
         end
     end
 
@@ -422,12 +438,12 @@ function cody:move()
     self:dash_jump()
 
     if self.contacts_[cc.kinematic_contact_.right] then
-        if self.current_browner_.speed_.x > 0 then
-            self.current_browner_.speed_.x = 0
+        if self.shared_variables_.speed_.x > 0 then
+            self.shared_variables_.speed_.x = 0
         end
     elseif self.contacts_[cc.kinematic_contact_.left] then
-        if self.current_browner_.speed_.x < 0 then
-            self.current_browner_.speed_.x = 0
+        if self.shared_variables_.speed_.x < 0 then
+            self.shared_variables_.speed_.x = 0
         end
     end
 end
@@ -517,39 +533,39 @@ end
 
 function cody:trigger_actions()
 
-    if not self.current_browner_.stunned_ then
-        if self.current_browner_.on_ground_ then
-            if self.current_browner_.walking_ then
-                if self.current_browner_.attacking_ then
+    if not self.shared_variables_.stunned_ then
+        if self.shared_variables_.on_ground_ then
+            if self.shared_variables_.walking_ then
+                if self.shared_variables_.attacking_ then
                     self.current_browner_:run_action("walkshoot")
                 else
                     self.current_browner_:run_action("walk")
                 end
             else
-                if self.current_browner_.attacking_ then
+                if self.shared_variables_.attacking_ then
                     self.current_browner_:run_action("standshoot")
-                elseif self.current_browner_.sliding_ then
+                elseif self.shared_variables_.sliding_ then
                     self.current_browner_:run_action("slide")
-                elseif self.current_browner_.morphing_ then
+                elseif self.shared_variables_.morphing_ then
                     self.current_browner_:run_action("morph")
                 else
                     self.current_browner_:run_action("stand")
                 end
             end
         else
-        if self.current_browner_.climbing_ then
-            if self.current_browner_.attacking_ then
+        if self.shared_variables_.climbing_ then
+            if self.shared_variables_.attacking_ then
                 self.current_browner_:run_action("climbshoot")
             else
                 self.current_browner_:run_action("climb")
             end
         else
-            if self.current_browner_.attacking_ then
+            if self.shared_variables_.attacking_ then
                 self.current_browner_:run_action("jumpshoot")
             else
-                if self.current_browner_.dash_jumping_ then
+                if self.shared_variables_.dash_jumping_ then
                     self.current_browner_:run_action("dashjump")
-                elseif self.current_browner_.jumping_ then
+                elseif self.shared_variables_.jumping_ then
                     self.current_browner_:run_action("jump")
                 end
             end
@@ -627,16 +643,16 @@ function cody:step(dt)
         if not self.demo_mode_ then
             if not self.on_exit_ then
                 self:solve_collisions()
-                self.current_browner_.speed_.x = 0
-                self.current_browner_.speed_.y = 0
+                self.shared_variables_.speed_.x = 0
+                self.shared_variables_.speed_.y = 0
             else
-                self.current_browner_.speed_.x = 0
-                self.current_browner_.speed_.y = 320
+                self.shared_variables_.speed_.x = 0
+                self.shared_variables_.speed_.y = 320
             end
         else
             if self.on_exit_ then
-                self.current_browner_.speed_.x = 0
-                self.current_browner_.speed_.y = 320
+                self.shared_variables_.speed_.x = 0
+                self.shared_variables_.speed_.y = 320
             end
         end
     end
@@ -645,7 +661,7 @@ function cody:step(dt)
 end
 
 function cody:post_step(dt)
-    self.current_speed_ = self.current_browner_.speed_
+    self.current_speed_ = self.shared_variables_.speed_
 
     self:kinematic_post_step(dt)
 

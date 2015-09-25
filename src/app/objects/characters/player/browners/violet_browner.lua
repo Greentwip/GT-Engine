@@ -1,11 +1,8 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner = import("app.objects.characters.player.browners.base.browner")
+local violet_browner = import("app.objects.characters.player.browners.base.browner").create("violet_browner")
 
-local violet_browner = class("violet_browner", browner)
-
-function violet_browner:ctor(sprite)
-    self.super:ctor(sprite)
+function violet_browner:bake()
 
     self.base_name_ = "violet"
 
@@ -23,8 +20,9 @@ function violet_browner:ctor(sprite)
     actions[#actions + 1] = {name = "hurt",       animation = {name = "violet_hurt",        forever = false, delay = 0.02} }
     actions[#actions + 1] = {name = "morph",      animation = {name = "violet_morph",       forever = false, delay = 0.10} }
 
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
     self.browner_id_ = cc.browners_.violet_.id_       -- overriden from parent
+    return self
 end
 
 function violet_browner:spawn()

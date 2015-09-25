@@ -1,13 +1,10 @@
 -- Copyright 2014-2015 Greentwip. All Rights Reserved.
 
-local browner       = import("app.objects.characters.player.browners.base.browner")
 local vine_bullet   = import("app.objects.weapons.browners.vine.vine_bullet")
 
-local vine_browner = class("vine_browner", browner)
+local vine_browner = import("app.objects.characters.player.browners.base.browner").create("vine_browner")
 
-function vine_browner:ctor(sprite)
-    self.super:ctor(sprite)
-
+function vine_browner:bake()
     -- constraints
     self.can_slide_         = false
     self.can_charge_        = false
@@ -25,20 +22,24 @@ function vine_browner:ctor(sprite)
     actions[#actions + 1] = {name = "climb",      animation = {name = "vine_climb",       forever = true,  delay = 0.16} }
     actions[#actions + 1] = {name = "hurt",       animation = {name = "vine_hurt",        forever = false, delay = 0.02} }
 
-    self.sprite_:load_actions_set(actions, true, self.base_name_)
+    self.sprite_:load_actions_set(actions, false, self.base_name_)
 
     self.browner_id_ = cc.browners_.vine_.id_       -- overriden from parent
 end
 
 function vine_browner:attack()
 
-    if self:getParent():attack_condition() and not self.jumping_ and not self.walking_ and not self.stunned_ and not self.attacking_ then
+    if self:getParent():attack_condition()
+            and not self.shared_variables_.jumping_
+            and not self.shared_variables_.walking_
+            and not self.shared_variables_.stunned_
+            and not self.shared_variables_.attacking_ then
 
         if self.energy_ > 0 then
 
             self.energy_ = self.energy_ - 1
 
-            self.attacking_ = true
+            self.shared_variables_.attacking_ = true
 
             local pre_delay = cc.DelayTime:create(self:get_action_duration("standshoot") * 0.20)
 
@@ -49,7 +50,7 @@ function vine_browner:attack()
             local post_delay = cc.DelayTime:create(self:get_action_duration("standshoot") * 0.30)
 
             local post_callback = cc.CallFunc:create(function()
-                self.attacking_ = false
+                self.shared_variables_.attacking_ = false
             end)
 
             local sequence = cc.Sequence:create(pre_delay, pre_callback, post_delay, post_callback, nil)
