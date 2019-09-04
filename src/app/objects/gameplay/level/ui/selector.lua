@@ -148,7 +148,7 @@ function selector:select_from(items)
     end
 
     if nearest ~= nil then
-        audio.playSound("sounds/sfx_select.wav", false)
+        audio.playSound("sounds/sfx_select.mp3", false)
         self:set_selected_item(nearest)
     end
 end

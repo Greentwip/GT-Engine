@@ -51,10 +51,6 @@ import android.util.Log;
 import android.view.WindowManager;
 import android.widget.Toast;
 
-// patch
-import com.sdkbox.plugin.SDKBox;
-
-
 
 public class AppActivity extends Cocos2dxActivity{
 
@@ -62,8 +58,6 @@ public class AppActivity extends Cocos2dxActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        SDKBox.init(this);
         
         if(nativeIsLandScape()) {
             setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
@@ -132,41 +126,5 @@ public class AppActivity extends Cocos2dxActivity{
     
     private static native boolean nativeIsLandScape();
     private static native boolean nativeIsDebug();
-
-
-// patch
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-          if(!SDKBox.onActivityResult(requestCode, resultCode, data)) {
-            super.onActivityResult(requestCode, resultCode, data);
-          }
-    }
-    @Override
-    protected void onStart() {
-          super.onStart();
-          SDKBox.onStart();
-    }
-    @Override
-    protected void onStop() {
-          super.onStop();
-          SDKBox.onStop();
-    }
-    @Override
-    protected void onResume() {
-          super.onResume();
-          SDKBox.onResume();
-    }
-    @Override
-    protected void onPause() {
-          super.onPause();
-          SDKBox.onPause();
-    }
-    @Override
-    public void onBackPressed() {
-          if(!SDKBox.onBackPressed()) {
-            super.onBackPressed();
-          }
-    }
-
     
 }

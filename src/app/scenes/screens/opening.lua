@@ -50,7 +50,7 @@ function opening:step(dt)
 --    if not self.triggered_ then
 --        if cc.key_pressed(cc.key_code_.start) then
 --            self.triggered_ = true
---            audio.playSound("sounds/sfx_selected.wav")
+--            audio.playSound("sounds/sfx_selected.mp3")
 --            self:getApp():enterScene("gameplay.stage_select", "FADE", 1)
 --        end
 --    end

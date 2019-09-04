@@ -67,7 +67,7 @@ function vine_browner:fire()
 
     local bullet_offset = 0
 
-    audio.playSound("sounds/sfx_buster_shoot_mid.wav", false)
+    audio.playSound("sounds/sfx_buster_shoot_mid.mp3", false)
 
     local bullet_position = cc.p(self:getParent():getPositionX() + (bullet_offset * self:get_sprite_normal().x),
                                  self:getParent():getPositionY() + 26)
@@ -83,8 +83,3 @@ function vine_browner:fire()
 end
 
 return vine_browner
-
-
-
-
-

@@ -154,7 +154,7 @@ function camera:step(dt)
             if not self.player_.climbing_ then
                 --image_speed = 0;
             end
-        elseif player_bbox_top > cc.bounds_:top() and self.player_.current_browner_.climbing_ then
+        elseif player_bbox_top > cc.bounds_:top() and self.player_.current_browner_.shared_variables_.climbing_ then
             self.shift_direction_ = cc.CAMERA.SHIFT.UP
         else
             self.shift_direction_ = cc.CAMERA.SHIFT.NONE

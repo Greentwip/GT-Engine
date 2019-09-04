@@ -222,7 +222,7 @@ function level_controller:step(dt)
                     if self.pause_fade_ == nil then
                         local on_fade_begin = function()
                             cc.pause_status_ = cc.PAUSE_STATUS.SCREEN
-                            audio.playSound("sounds/sfx_pause.wav", false)
+                            audio.playSound("sounds/sfx_pause.mp3", false)
                             cc.pause(true)
                         end
 
@@ -251,7 +251,7 @@ function level_controller:step(dt)
 
                         if self.pause_menu_.ready_ then
                             local on_fade_begin = function()
-                                audio.playSound("sounds/sfx_selected.wav", false)
+                                audio.playSound("sounds/sfx_selected.mp3", false)
                                 self.pause_menu_.ready_ = false
                             end
 

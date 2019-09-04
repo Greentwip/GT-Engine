@@ -273,7 +273,7 @@ end
 
 function cody:stun(damage)
     if not self.shared_variables_.stunned_ and self.vulnerable_ then
-        audio.playSound("sounds/sfx_hit.wav", false)
+        audio.playSound("sounds/sfx_hit.mp3", false)
 
         self.health_ = self.health_ - damage
 
@@ -337,7 +337,7 @@ function cody:solve_collisions()
             if self.spawning_ then
                 self.spawning_ = false
                 self:switch_browner(cc.browners_.violet_.id_)
-                audio.playSound("sounds/sfx_teleport1.wav", false)
+                audio.playSound("sounds/sfx_teleport1.mp3", false)
             end
 
         elseif collision_tag == cc.tags.item then
@@ -420,7 +420,7 @@ function cody:move()
             self.shared_variables_.on_ground_    = true
             self.shared_variables_.dash_jumping_ = false
             self.shared_variables_.jumping_      = false
-            audio.playSound("sounds/sfx_land.wav", false)
+            audio.playSound("sounds/sfx_land.mp3", false)
         end
     else
         self.shared_variables_.on_ground_ = false
@@ -500,7 +500,7 @@ function cody:check_health()
         self.health_ = 0
         self.alive_ = false
         audio.stopMusic()
-        audio.playSound("sounds/sfx_death.wav", false)
+        audio.playSound("sounds/sfx_death.mp3", false)
 
         if kill_animation then
 
@@ -586,7 +586,7 @@ function cody:exit(args)
 
     self:switch_browner(cc.browners_.teleport_.id_)
 
-    audio.playSound("sounds/sfx_teleport2.wav", false)
+    audio.playSound("sounds/sfx_teleport2.mp3", false)
 
     local delay = cc.DelayTime:create(4)
     local callback = cc.CallFunc:create(function()

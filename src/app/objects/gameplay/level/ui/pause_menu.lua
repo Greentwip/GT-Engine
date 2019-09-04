@@ -210,7 +210,7 @@ function pause_menu:init_callbacks()
                 cc.pause(true)
             end)
         else
-            audio.playSound("sounds/sfx_error.wav", false)
+            audio.playSound("sounds/sfx_error.mp3", false)
         end
     end
 
@@ -221,7 +221,7 @@ function pause_menu:init_callbacks()
             self.items_ = self.browner_items_
             self.selector_:set_selected_item(self.default_browner_)
         else
-            audio.playSound("sounds/sfx_error.wav", false)
+            audio.playSound("sounds/sfx_error.mp3", false)
         end
 
     end
@@ -243,10 +243,10 @@ function pause_menu:init_callbacks()
                         cc.pause(true)
                     end)
                 else
-                    audio.playSound("sounds/sfx_error.wav", false)
+                    audio.playSound("sounds/sfx_error.mp3", false)
                 end
             else
-                audio.playSound("sounds/sfx_error.wav", false)
+                audio.playSound("sounds/sfx_error.mp3", false)
             end
 
             self.filling_m_tank_ = false
@@ -327,7 +327,7 @@ function pause_menu:switch_triggered(sender)
             sender_value = 2
         end
     elseif sender == self.exit_switch_ then
-        audio.playSound("sounds/sfx_selected.wav", false)
+        audio.playSound("sounds/sfx_selected.mp3", false)
         self:setVisible(false)
         self.player_:getParent():setVisible(false)
         self.player_

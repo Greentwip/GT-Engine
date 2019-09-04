@@ -85,7 +85,7 @@ function enemy:solve_collisions()
 
     for _, collision in pairs(collisions) do
         if collision:getPhysicsBody():getShapes()[1]:getTag() == cc.tags.weapon.player then
-            audio.playSound("sounds/sfx_enemyhit.wav", false)
+            audio.playSound("sounds/sfx_enemyhit.mp3", false)
 
             local blink = cc.Blink:create(0.2, 4)
             local callback = cc.CallFunc:create(self.on_after_blink)
@@ -117,7 +117,7 @@ end
 
 function enemy:onDefeated()
 
-    audio.playSound("sounds/sfx_explosion1.wav", false)
+    audio.playSound("sounds/sfx_explosion1.mp3", false)
 
     local random_item = math.floor(math.random(400))
 
@@ -272,4 +272,3 @@ function enemy:post_step(dt)
 end
 
 return enemy
-

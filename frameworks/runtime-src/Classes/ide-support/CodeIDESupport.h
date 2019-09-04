@@ -2,10 +2,6 @@
 #define __CODE_IDE_SUPPORT_H__
 
 // define 1 to open Cocos Code IDE support, 0 to disable
-#ifdef __DEBUG
-	#define CC_CODE_IDE_DEBUG_SUPPORT 1
-#else 
-	#define CC_CODE_IDE_DEBUG_SUPPORT 0
-#endif
+#define CC_CODE_IDE_DEBUG_SUPPORT 0
 
 #endif /* __CODE_IDE_SUPPORT_H__ */

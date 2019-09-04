@@ -60,7 +60,7 @@ function MyApp:setup_callbacks()
 
     function cc.callbacks_.pre_fill()
         cc.pause(true)
-        audio.playSound("sounds/sfx_getenergy.wav", false)
+        audio.playSound("sounds/sfx_getenergy.mp3", false)
     end
 
     function cc.callbacks_.post_fill()
@@ -369,7 +369,7 @@ function MyApp:setup_items()
                 cc.player_.lives_ = cc.player_.lives_ + 1
             end
 
-            audio.playSound("sounds/sfx_getlife.wav", false)
+            audio.playSound("sounds/sfx_getlife.mp3", false)
 
         elseif item.id_ >= cc.item_.helmet_.id_ and item.id_ <= cc.item_.boot_.id_ then
             for _, unlockable in pairs(cc.unlockables_) do
@@ -378,21 +378,21 @@ function MyApp:setup_items()
                 end
             end
 
-            audio.playSound("sounds/sfx_getlife.wav", false)
+            audio.playSound("sounds/sfx_getlife.mp3", false)
 
         elseif item.id_ == cc.item_.e_tank_.id_ then
             if cc.player_.e_tanks_ < 9 then
                 cc.player_.e_tanks_ = cc.player_.e_tanks_ + 1
             end
 
-            audio.playSound("sounds/sfx_getlife.wav", false)
+            audio.playSound("sounds/sfx_getlife.mp3", false)
 
         elseif item.id_ == cc.item_.m_tank_.id_ then
             if cc.player_.m_tanks_ < 9 then
                 cc.player_.m_tanks_ = cc.player_.m_tanks_ + 1
             end
 
-            audio.playSound("sounds/sfx_getlife.wav", false)
+            audio.playSound("sounds/sfx_getlife.mp3", false)
 
         else
             player:restore_sanity(item)

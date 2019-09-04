@@ -114,7 +114,7 @@ function title:step(dt)
     if not self.triggered_ then
         if cc.key_pressed(cc.key_code_.a) then
             self.triggered_ = true
-            audio.playSound("sounds/sfx_selected.wav")
+            audio.playSound("sounds/sfx_selected.mp3")
 
             self.exit_arguments_ = {}
             self.exit_arguments_.demo_browner_id_ = cc.browners_.violet_.id_

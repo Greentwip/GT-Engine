@@ -195,7 +195,7 @@ end
 
 function boss:stun(damage)
     if not self.current_browner_.stunned_ and self.vulnerable_ then
-        audio.playSound("sounds/sfx_hit.wav", false)
+        audio.playSound("sounds/sfx_hit.mp3", false)
 
         self.health_ = self.health_ - damage
 
@@ -254,7 +254,7 @@ function boss:solve_collisions()
                 self.current_browner_:run_action("intro")
                 self.current_browner_.is_intro_ = true
 
-                audio.playSound("sounds/sfx_teleport1.wav", false)
+                audio.playSound("sounds/sfx_teleport1.mp3", false)
                 self.battle_status_ = cc.battle_status_.intro_
             end
 
@@ -276,7 +276,7 @@ function boss:move()
             self.current_browner_.on_ground_    = true
             self.current_browner_.dash_jumping_ = false
             self.current_browner_.jumping_      = false
-            audio.playSound("sounds/sfx_land.wav", false)
+            audio.playSound("sounds/sfx_land.mp3", false)
         end
     else
         self.current_browner_.on_ground_ = false
@@ -406,7 +406,7 @@ function boss:check_health()
 
         --cc.player_.lives_ = cc.player_.lives_ - 1
         audio.stopMusic()
-        audio.playSound("sounds/sfx_death.wav", false)
+        audio.playSound("sounds/sfx_death.mp3", false)
 
         self:finish(true)
 
@@ -604,4 +604,3 @@ function boss:post_step(dt)
 end
 
 return boss
-

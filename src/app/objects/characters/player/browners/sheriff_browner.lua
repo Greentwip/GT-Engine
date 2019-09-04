@@ -67,7 +67,7 @@ function sheriff_browner:fire()
 
     local bullet_offset = 24
 
-    audio.playSound("sounds/sfx_buster_shoot_mid.wav", false)
+    audio.playSound("sounds/sfx_buster_shoot_mid.mp3", false)
 
     local bullet_position_a = cc.p(self:getParent():getPositionX() + (bullet_offset * self:get_sprite_normal().x),
                                    self:getParent():getPositionY() + 14)
@@ -94,8 +94,3 @@ function sheriff_browner:fire()
 end
 
 return sheriff_browner
-
-
-
-
-

@@ -6,30 +6,36 @@
         <dict>
             <key>level_militaryman_bank.png</key>
             <dict>
-                <key>frame</key>
-                <string>{{0,0},{1206,1008}}</string>
-                <key>offset</key>
-                <string>{-1,0}</string>
-                <key>rotated</key>
-                <false/>
-                <key>sourceColorRect</key>
-                <string>{{0,0},{1206,1008}}</string>
-                <key>sourceSize</key>
+                <key>aliases</key>
+                <array/>
+                <key>spriteOffset</key>
+                <string>{0,0}</string>
+                <key>spriteSize</key>
                 <string>{1208,1008}</string>
+                <key>spriteSourceSize</key>
+                <string>{1208,1008}</string>
+                <key>textureRect</key>
+                <string>{{0,0},{1208,1008}}</string>
+                <key>textureRotated</key>
+                <false/>
             </dict>
         </dict>
         <key>metadata</key>
         <dict>
             <key>format</key>
-            <integer>2</integer>
+            <integer>3</integer>
+            <key>pixelFormat</key>
+            <string>RGBA8888</string>
+            <key>premultiplyAlpha</key>
+            <false/>
             <key>realTextureFileName</key>
-            <string>level_militaryman_bank.pvr.ccz</string>
+            <string>level_militaryman_bank.png</string>
             <key>size</key>
-            <string>{1206,1008}</string>
+            <string>{1208,1008}</string>
             <key>smartupdate</key>
-            <string>$TexturePacker:SmartUpdate:429b2f719c1ae02e4604eb99498bf5a6:a9198399b1ea8f48e8a0d4c8cf48cb8b:5e6aa6bf8a30a1dc269add2c56359547$</string>
+            <string>$TexturePacker:SmartUpdate:ce1491233003e86af0b588ad96789134:a9198399b1ea8f48e8a0d4c8cf48cb8b:2d5cfe2284a45f97e103e3854b201004$</string>
             <key>textureFileName</key>
-            <string>level_militaryman_bank.pvr.ccz</string>
+            <string>level_militaryman_bank.png</string>
         </dict>
     </dict>
 </plist>

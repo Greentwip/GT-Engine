@@ -86,7 +86,7 @@ function intro:ctor(parallax_arguments)
 
         local audio_delay = cc.DelayTime:create(0.8)
         local audio_callback = cc.CallFunc:create(function()
-            audio.playSound("sounds/screens/common/belt/sfx_belt_join.wav", false)
+            audio.playSound("sounds/sfx_belt_join.mp3", false)
         end)
 
         local audio_sequence = cc.Sequence:create(audio_delay, audio_callback, nil)

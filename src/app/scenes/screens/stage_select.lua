@@ -170,7 +170,7 @@ function stage_select:move_left()
     end
 
     if play_fx then
-        audio.playSound("sounds/sfx_select.wav")
+        audio.playSound("sounds/sfx_select.mp3")
     end
 end
 
@@ -197,7 +197,7 @@ function stage_select:move_right()
     end
 
     if play_fx then
-        audio.playSound("sounds/sfx_select.wav")
+        audio.playSound("sounds/sfx_select.mp3")
     end
 
 end
@@ -226,7 +226,7 @@ function stage_select:move_up()
     end
 
     if play_fx then
-        audio.playSound("sounds/sfx_select.wav")
+        audio.playSound("sounds/sfx_select.mp3")
     end
 
 end
@@ -254,7 +254,7 @@ function stage_select:move_down()
     end
 
     if play_fx then
-        audio.playSound("sounds/sfx_select.wav")
+        audio.playSound("sounds/sfx_select.mp3")
     end
 
 end
@@ -278,7 +278,7 @@ function stage_select:step(dt)
                 local mug_index = selected_mug:get_image_index()
                 cc.current_level_ = cc.levels_[mug_index]
 
-                audio.playSound("sounds/sfx_selected.wav")
+                audio.playSound("sounds/sfx_selected.mp3")
 
                 if cc.current_level_.defeated_ then
                     self:getApp()
